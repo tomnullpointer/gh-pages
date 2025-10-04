@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>NULLPOINTER</title>
-    <link href="https://tomnullpointer.github.io/website/feed.xml" rel="self" />
-    <link href="https://tomnullpointer.github.io/website" />
+    <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
+    <link href="https://tomnullpointer.github.io/gh-pages" />
     <updated>2025-10-04T12:09:14+01:00</updated>
     <author>
         <name>me</name>
     </author>
-    <id>https://tomnullpointer.github.io/website</id>
+    <id>https://tomnullpointer.github.io/gh-pages</id>
 
     <entry>
         <title>About My Academic Practice</title>
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/about-my-academic-practice.html"/>
-        <id>https://tomnullpointer.github.io/website/about-my-academic-practice.html</id>
+        <link href="https://tomnullpointer.github.io/gh-pages/about-my-academic-practice.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/about-my-academic-practice.html</id>
             <category term="About"/>
 
         <updated>2025-10-04T11:57:23+01:00</updated>
@@ -26,7 +26,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/website/media/posts/9/mexico1.jpg" alt="" width="800" height="534" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/website/media/posts/9/responsive/mexico1-xs.jpg 320w ,https://tomnullpointer.github.io/website/media/posts/9/responsive/mexico1-sm.jpg 480w ,https://tomnullpointer.github.io/website/media/posts/9/responsive/mexico1-md.jpg 768w ,https://tomnullpointer.github.io/website/media/posts/9/responsive/mexico1-xl.jpg 1024w"></figure>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1.jpg" alt="" width="800" height="534" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xl.jpg 1024w"></figure>
 <p><br><em>Presenting my work at the Museo Tamayo, Mexico City</em></p>
 <p>I am an experienced lecturer and academic with a PhD exploring “the digital sublime in videogames”. This research investigates the philosophical and conceptual considerations of using procedural generation and generative processes in game design. Some of the technical research i produced for my thesis is available <a href="http://www.nullpointer.co.uk/content/category/tech-2/" rel="noopener" target="_blank">here</a>, and the games I produced for the PhD are covered <a href="http://www.nullpointer.co.uk/content/completed-games/" rel="noopener" target="_blank">here</a>.</p>
 <p>In parallel to working on my PhD I also taught at The University of Huddersfield as a cross-department practicing lecturer between the school of Art,Design &amp; Architecture and the school of Computing. In this role i taught a range of modules from foundation programming (xna/unity) to Critical Game theory. During this time i also provided tutorial support and workshops for the students. Since that time I have been a visiting lecturer for both the University of Sussex and The University of Brighton.</p>
@@ -39,8 +39,8 @@
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/nullpointer-games.html"/>
-        <id>https://tomnullpointer.github.io/website/nullpointer-games.html</id>
+        <link href="https://tomnullpointer.github.io/gh-pages/nullpointer-games.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/nullpointer-games.html</id>
             <category term="About"/>
 
         <updated>2025-10-04T11:55:28+01:00</updated>
@@ -51,7 +51,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/website/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="840" height="504" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/website/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/website/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/website/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/website/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="840" height="504" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
 <p>I have over 10 years of design and programming experience, working for Big-Robot ltd, producing client driven projects, teaching game design at University level and creating cutting edge game-projects for Phd research. I work mainly in Unity, but I also have experience of working with c++, openframeworks, developing for Ios &amp; Android platforms and Nintendo Switch.</p>
 <p>I have worked on many aspects of design and programming including; AI, UI, UX, level design, VFX, sound design, game mechanics, physics, animation, shaders. I have produced several projects as a solo developer, but I am also used to working in teams, directing art/sound/animation, defining additional programming, managing production, workflow, testing, releases and repositories.</p>
 <p>I have given presentations about creative coding and game design at various international venues including GDC (San Francisco), Indievelopment (Amsterdam), Rezzed (UK). I have a Phd in philosophy &amp; game design and have a specific interest in procedural generation and generative art.</p>
@@ -93,21 +93,21 @@
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/about-me-post.html"/>
-        <id>https://tomnullpointer.github.io/website/about-me-post.html</id>
-        <media:content url="https://tomnullpointer.github.io/website/media/posts/7/instapic.png" medium="image" />
+        <link href="https://tomnullpointer.github.io/gh-pages/about-me-post.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/about-me-post.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T11:49:01+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tomnullpointer.github.io/website/media/posts/7/instapic.png" alt="" />
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" alt="" />
                     Tom Betts, aka Nullpointer, is an artist, academic and coder with a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://tomnullpointer.github.io/website/media/posts/7/instapic.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" class="type:primaryImage" alt="" /></p>
                 <p>Tom Betts, aka Nullpointer, is an artist, academic and coder with a PhD exploring “the digital sublime in videogames”. He was the lead programmer at game development studio <a href="http://www.big-robot.com/" target="_blank" rel="noopener">Big Robot</a>, responsible for games such as “Sir, You are being Hunted”, “The Signal From Tolva” and “The light will keep us safe”. Now he runs his own game development studio Nullpointer Games.</p>
 <p>He is a published musician, and has performed and delivered talks at international events such as DIGRA, FreePlay, UNITE, Sonar, Rezzed and Indievelopment. He has shown his digital artwork at the ICA, ZKM, New museum(NY) and the Rotterdam film festival and has worked on projects for the Tate, V&amp;A and Southbank Centre. He likes generative systems, green tea, watching films where nothing much happens, the colour grey and ironing.</p>
 <p>On this site you can find a semi-regular feed of proc-gen experiments and information on completed games.</p>
@@ -121,21 +121,21 @@
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/new-post-3.html"/>
-        <id>https://tomnullpointer.github.io/website/new-post-3.html</id>
-        <media:content url="https://tomnullpointer.github.io/website/media/posts/4/instapic.png" medium="image" />
+        <link href="https://tomnullpointer.github.io/gh-pages/new-post-3.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/new-post-3.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/4/instapic.png" medium="image" />
             <category term="DevBlog"/>
 
         <updated>2025-10-04T10:52:59+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tomnullpointer.github.io/website/media/posts/4/instapic.png" alt="" />
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/4/instapic.png" alt="" />
                     This post outlines some of the technical issues and solutions connected with&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://tomnullpointer.github.io/website/media/posts/4/instapic.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/4/instapic.png" class="type:primaryImage" alt="" /></p>
                 <p>This post outlines some of the technical issues and solutions connected with the development of Permutation Racer, the third game produced for my PhD research.</p>
 <p>Permutation Racer is an experimental, endless racing game, exploring the procedural construction of space.<br>It’s part of an ongoing investigation of ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. The objective is simply to travel as far as possible. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/permutation-racer">available at this link</a>. A description of the approach developed for Permutation Racer is outlined below.</p>
             ]]>
@@ -146,8 +146,8 @@
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/new-post-2.html"/>
-        <id>https://tomnullpointer.github.io/website/new-post-2.html</id>
+        <link href="https://tomnullpointer.github.io/gh-pages/new-post-2.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/new-post-2.html</id>
             <category term="DevBlog"/>
 
         <updated>2025-10-04T10:52:54+01:00</updated>
@@ -159,8 +159,8 @@
         <author>
             <name>me</name>
         </author>
-        <link href="https://tomnullpointer.github.io/website/new-page-what-is-this.html"/>
-        <id>https://tomnullpointer.github.io/website/new-page-what-is-this.html</id>
+        <link href="https://tomnullpointer.github.io/gh-pages/new-page-what-is-this.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/new-page-what-is-this.html</id>
             <category term="DevBlog"/>
 
         <updated>2025-10-04T10:47:08+01:00</updated>
@@ -172,7 +172,7 @@
         <content type="html">
             <![CDATA[
                 <p>An example of a blog post that i might add over time</p>
-<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/website/media/posts/1/TomBetts2.jpg" alt="" width="640" height="640" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/website/media/posts/1/responsive/TomBetts2-xs.jpg 320w ,https://tomnullpointer.github.io/website/media/posts/1/responsive/TomBetts2-sm.jpg 480w ,https://tomnullpointer.github.io/website/media/posts/1/responsive/TomBetts2-md.jpg 768w ,https://tomnullpointer.github.io/website/media/posts/1/responsive/TomBetts2-xl.jpg 1024w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/1/TomBetts2.jpg" alt="" width="640" height="640" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-xl.jpg 1024w"></figure>
 <p> </p>
             ]]>
         </content>
