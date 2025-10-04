@@ -3,12 +3,66 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-10-04T21:26:41+01:00</updated>
+    <updated>2025-10-04T21:43:25+01:00</updated>
     <author>
         <name>me</name>
     </author>
     <id>https://tomnullpointer.github.io/gh-pages</id>
 
+    <entry>
+        <title>C.V. Bio</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/cv-bio.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/cv-bio.html</id>
+            <category term="About"/>
+
+        <updated>2025-10-04T21:40:47+01:00</updated>
+            <summary>
+                <![CDATA[
+                    I have over 10 years of design and programming experience, producing client&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I have over 10 years of design and programming experience, producing client driven projects, teaching game design at University level and creating cutting edge game-projects for Phd research. I work mainly in Unity, but I also have experience of working with c++, openframeworks, developing for Ios &amp; Android platforms and Nintendo Switch.</p>
+<p>I have worked on many aspects of design and programming including; AI, UI, UX, level design, VFX, sound design, game mechanics, physics, animation, shaders. I have produced several projects as a solo developer, but I am also used to working in teams, directing art/sound/animation, defining additional programming, managing production, workflow, testing, releases and repositories.</p>
+<p>For 7 years i worked in a small team, making games as part of Big Robot ltd, but since 2018 I have been producing games through my own company Nullpointer Exception ltd.</p>
+<p>I have given presentations about creative coding and game design at various international venues including GDC (San Francisco), Indievelopment (Amsterdam), Rezzed (UK). I have a Phd in philosophy &amp; game design and have a specific interest in procedural generation and generative art.</p>
+<p>You can read more about my work by exploring the <em>Recommended Topics</em> listed to the right of this page.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Game Jams and Freebies</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/game-jams-and-freebies.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/game-jams-and-freebies.html</id>
+            <category term="Procedural Generation"/>
+            <category term="Game Development"/>
+
+        <updated>2025-10-04T21:37:42+01:00</updated>
+            <summary>
+                <![CDATA[
+                    PERMUTATION RACER Permutation Racer’ is an experimental, endless racing game, exploring the&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/nvVdMr6ox9A" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<p><br><a href="https://tomnullpointer.itch.io/permutation-racer" rel="noopener" target="_blank">PERMUTATION RACER</a></p>
+<p>Permutation Racer’ is an experimental, endless racing game, exploring the procedural construction of space.</p>
+<p>It’s part of my PHD research to investigate ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. I might post a more technical article about the actual methods used later. The only aim is to travel as far as possible, hampered by the fact that over time/distance the generation algorithms make the track more hazardous and convoluted.</p>
+<p><img loading="lazy" src="https://img.itch.zone/aW1hZ2UvNDk1NDQvMjE3MDA0LmpwZw==/original/mGvqB%2F.jpg" alt="screenshot" width="100%" data-is-external-image="true"></p>
+<p><a href="https://tomnullpointer.itch.io/in-ruins" rel="noopener" target="_blank">IN RUINS</a></p>
+<p>‘In Ruins’ is an experimental, ambient game examining the procedural construction of space. It’s part of an ongoing Phd research project to investigate ideas that connect games, permutation and the sublime. It’s part of a series of games inspired by artistic interpretations of the sublime, in this case the work of Romantic landscape painters (Thomas Cole, Caspar David Friedrich etc). Its also heavily influenced by Fumito Uedas Ico series.</p>
+<p>The player is deposited on the edge of a procedurally generated island. The island consists of overgrown pathways ruined spires and broken ramparts. A central tower looms above the island beckoning the player towards it.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Coding a generative music game – AvSeq</title>
         <author>
@@ -294,7 +348,7 @@ The work shows different seeding locations on mars, with each terrain displaying
         </content>
     </entry>
     <entry>
-        <title>Game Development</title>
+        <title>Commercial Games</title>
         <author>
             <name>me</name>
         </author>
@@ -305,19 +359,18 @@ The work shows different seeding locations on mars, with each terrain displaying
         <updated>2025-10-04T11:55:28+01:00</updated>
             <summary>
                 <![CDATA[
-                    I have over 10 years of design and programming experience, producing client&hellip;
+                    As Nullpointer Games The Horror At Highrook The Horror at Highrook is&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="203" height="122" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
-<p>I have over 10 years of design and programming experience, producing client driven projects, teaching game design at University level and creating cutting edge game-projects for Phd research. I work mainly in Unity, but I also have experience of working with c++, openframeworks, developing for Ios &amp; Android platforms and Nintendo Switch.</p>
-<p>I have worked on many aspects of design and programming including; AI, UI, UX, level design, VFX, sound design, game mechanics, physics, animation, shaders. I have produced several projects as a solo developer, but I am also used to working in teams, directing art/sound/animation, defining additional programming, managing production, workflow, testing, releases and repositories.</p>
-<p>For 7 years i worked in a small team, making games as part of Big Robot ltd, but since 2018 I have been producing games through my own company Nullpointer Exception ltd.</p>
-<p>I have given presentations about creative coding and game design at various international venues including GDC (San Francisco), Indievelopment (Amsterdam), Rezzed (UK). I have a Phd in philosophy &amp; game design and have a specific interest in procedural generation and generative art.</p>
-<p>You can read more about my work by exploring the <em>Recommended Topics</em> listed to the right of this page.</p>
-<p>The games listed below each have their own info page (on steam/itch etc), but more info is also available on request.</p>
-<div class="fluid-width-video-wrapper"> </div>
+                <h2>As Nullpointer Games</h2>
+<figure class="post__image"><img loading="lazy"  style="outline: rgba(16, 137, 255, 0.55) solid 3px !important;" src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="203" height="122" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
+<h3><a href="https://store.steampowered.com/app/2836860/The_Horror_at_Highrook/" target="_blank" rel="noopener noreferrer">The Horror At Highrook</a></h3>
+<p>The Horror at Highrook is an occult card crafting narrative RPG. Explore a haunted mansion with your team of investigators, summon dark entities, craft powerful protections, uncover the fate of the missing family, and choose your own path through the darkness.</p>
+<h3><a href="https://store.steampowered.com/app/1422410/Into_the_Pit" target="_blank" rel="noopener noreferrer">Into The Pit</a></h3>
+<p>A fast-paced retro-FPS roguelite! As a member of a family of lore-hunting mystics you are summoned to a cursed village, drawn by rumors of a demonic portal. Dark magics have overwhelmed the village, It's up to you to rescue the survivors, grow your powers, and journey forth INTO THE PIT.</p>
+<h2>Games with Big Robot</h2>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/ZsxS8EntqOM" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p><br><a href="https://store.steampowered.com/app/853240/The_Light_Keeps_Us_Safe/" rel="noopener" target="_blank">THE LIGHT KEEPS US SAFE</a></p>
 <p>The Light Keeps Us Safe is a procedurally-generated apocalypse in which only The Light can save us. Use stealth and evasion to avoid terrifying machines that patrol the desolate world, and employ the powers of Light to unpick their deadly traps. Early access, due for release 2019</p>
@@ -335,14 +388,6 @@ The work shows different seeding locations on mars, with each terrain displaying
 <p><br><a href="https://store.steampowered.com/app/242880/Sir_You_Are_Being_Hunted/" rel="noopener" target="_blank">SIR YOU ARE BEING HUNTED</a></p>
 <p>Sir, You Are Being Hunted is a procedurally-generated British horror in which tweed-wearing robots hunt you for sport. Roam the landscape, scavenge for food, hide breathlessly in the undergrowth, flee in terror, and even fight back with stolen weapons.</p>
 <p>Sir is a stealth and survival game unlike any other, set on a mysterious archipelago generated procedurally by you, and therefore unique to each game you play. You can define your own islands, each one created in moments by our rather clever British Countryside Generator. These islands are then populated by a raving aristocracy of murderous robots, their robot hounds, and worse. You job is simply to survive, and get home.</p>
-<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/nvVdMr6ox9A" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
-<p><br><a href="https://tomnullpointer.itch.io/permutation-racer" rel="noopener" target="_blank">PERMUTATION RACER</a></p>
-<p>Permutation Racer’ is an experimental, endless racing game, exploring the procedural construction of space.</p>
-<p>It’s part of my PHD research to investigate ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. I might post a more technical article about the actual methods used later. The only aim is to travel as far as possible, hampered by the fact that over time/distance the generation algorithms make the track more hazardous and convoluted.</p>
-<p><img loading="lazy" src="https://img.itch.zone/aW1hZ2UvNDk1NDQvMjE3MDA0LmpwZw==/original/mGvqB%2F.jpg" alt="screenshot" width="100%" data-is-external-image="true"></p>
-<p><a href="https://tomnullpointer.itch.io/in-ruins" rel="noopener" target="_blank">IN RUINS</a></p>
-<p>‘In Ruins’ is an experimental, ambient game examining the procedural construction of space. It’s part of an ongoing Phd research project to investigate ideas that connect games, permutation and the sublime. It’s part of a series of games inspired by artistic interpretations of the sublime, in this case the work of Romantic landscape painters (Thomas Cole, Caspar David Friedrich etc). Its also heavily influenced by Fumito Uedas Ico series.</p>
-<p>The player is deposited on the edge of a procedurally generated island. The island consists of overgrown pathways ruined spires and broken ramparts. A central tower looms above the island beckoning the player towards it.</p>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/X4APyGuD0lg" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <figure class="post__video"><a href="https://store.steampowered.com/app/207670/AVSEQ/" rel="noopener" target="_blank">AVSEQ</a></figure>
 <p>AVSEQ is an audio-visual sequencer puzzle game. Connect falling atoms to unlock near-endless varieties of music at each stage. Every level of AVSEQ is a music sequencer with 2.2300745198530623×10^43 possible audio permutations, that’s 22 tredecillion in total!</p>
@@ -396,42 +441,6 @@ The work shows different seeding locations on mars, with each terrain displaying
                     <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/4/instapic.png" class="type:primaryImage" alt="" /></p>
                 <p>This post outlines some of the technical issues and solutions connected with the development of Permutation Racer, the third game produced for my PhD research.</p>
 <p>Permutation Racer is an experimental, endless racing game, exploring the procedural construction of space.<br>It’s part of an ongoing investigation of ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. The objective is simply to travel as far as possible. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/permutation-racer">available at this link</a>. A description of the approach developed for Permutation Racer is outlined below.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Post 2</title>
-        <author>
-            <name>me</name>
-        </author>
-        <link href="https://tomnullpointer.github.io/gh-pages/new-post-2.html"/>
-        <id>https://tomnullpointer.github.io/gh-pages/new-post-2.html</id>
-            <category term="DevBlog"/>
-
-        <updated>2025-10-04T10:52:54+01:00</updated>
-            <summary></summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Post 1</title>
-        <author>
-            <name>me</name>
-        </author>
-        <link href="https://tomnullpointer.github.io/gh-pages/new-page-what-is-this.html"/>
-        <id>https://tomnullpointer.github.io/gh-pages/new-page-what-is-this.html</id>
-            <category term="DevBlog"/>
-
-        <updated>2025-10-04T10:47:08+01:00</updated>
-            <summary>
-                <![CDATA[
-                    An example of a blog post that i might add over time
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>An example of a blog post that i might add over time</p>
-<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/1/TomBetts2.jpg" alt="" width="640" height="640" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/1/responsive/TomBetts2-xl.jpg 1024w"></figure>
-<p> </p>
             ]]>
         </content>
     </entry>
