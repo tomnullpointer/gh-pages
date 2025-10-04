@@ -3,14 +3,274 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-10-04T14:35:17+01:00</updated>
+    <updated>2025-10-04T21:26:41+01:00</updated>
     <author>
         <name>me</name>
     </author>
     <id>https://tomnullpointer.github.io/gh-pages</id>
 
     <entry>
-        <title>About My Academic Practice</title>
+        <title>Coding a generative music game – AvSeq</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html</id>
+            <category term="Procedural Generation"/>
+            <category term="Game Development"/>
+            <category term="Explainer"/>
+
+        <updated>2025-10-04T19:18:54+01:00</updated>
+            <summary>
+                <![CDATA[
+                    This post outlines some of the technical issues and solutions connected with&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubAvseq1.jpg" alt="" width="100%/" data-is-external-image="true"><br><br></p>
+<div class="entry-content">
+<article>
+<p>This post outlines some of the technical issues and solutions connected with the development of AvSeq, the first game produced for my PhD research. More generalised information about the game is available <a href="http://www.nullpointer.co.uk/content/avseq-3/">here</a></p>
+<h2>Accurate high frequency audio timing and quantization in Unity</h2>
+<p>During the development of AvSeq I needed to find a way to get a high accuracy audiotimer to trigger audiovisual events in perfect synchronization. Unity is primarily a games engine and had not built-in functionality to support this type of requirement. In libraries like portaudio the code provides a callback function that can deliver buffered content to the soundcard, down to the level of a single sample. In Unity the update threads run at a much slower rate and cant be used for reliable timing. Unity also discourages the use of threads and out-of-update callbacks so I had to find another way. The solution I came up with was to leverage the built in functions of the packaged FMOD library. I particular this library provides functions to<br>grab the current playpoint of a sample and also trigger a sample with a specific pre-roll delay.<br>I used these features in the following steps.</p>
+<ol>
+<li>Setup and play a hardware looping metronome via FMOD. This can be a standard clicktrack sample or even a silent audiofile. The length and playback pitch of the file represents a single audio-beat cycle that can be tracked in code.</li>
+<li>Run a FixedUpdate (or any fast thread) and within this request the the current PCM sample position of the metronome.</li>
+<li>Use this position to detect if the current loop of the metronome sample is nearing its end. The margin of error for this ‘catching’ process detect depends on the frequency of your update and the pitch/frequency of the metronome.</li>
+<li>If the retrieved PCM location is close enough to the next loop point then trigger a new sound to play BUT set the new sample pre-roll to the remaining samples in the current loop (loop sample length- current sample position).</li>
+<li>Don’t create or run any further triggers until the retrieved position has looped back over the zero-point.<em><br></em></li>
+</ol>
+<p>This system allows accuracy up until a relatively high tempo rate (dependent on individual machine speed), and allows the sample accurate triggering and quantizing of triggered audiosources. The tempo of the entire system can be adjusted by varying the playback pitch of the reference metronome, for example a metronome sample of 1 second length, will define a bpm of 60. At double the metronome pitch the bpm will be 120. The ‘catch’ margin can be adjusted dynamically as a percentage of this overall length if you want real-time pitch changes like I use in AvSeq. In AvSeq I also use the looping reference sample to keep track of beats/bars in the total sequence and each new beat trigger the playback of samples assigned to that beat in the sequencer score.</p>
+<p>Some example code:</p>
+<pre>	void FixedUpdate () {
+
+		m_MS=m_ASMetronome.timeSamples;//get the current position of the looping reference sample
+		uint catchup=0;
+		float delay=0;
+
+		if(m_MS&lt;m_CatchMargin &amp;&amp; m_HasLooped==1)//check to see if the reference sample has looped and has been dealt with
+		{
+			m_HasLooped=0;//reset the haslooped indicator
+		}
+
+		//catch end of loop
+		if(m_MS&gt;m_SampleLength-m_CatchMargin)
+		{
+			m_MSCatch=m_MS;
+
+			//only do if we havent marked a new loop yet
+			if(m_HasLooped==0)
+			{
+			catchup=(uint)(m_SampleLength-m_MS);	//work out how long to delay the start of any new sample
+			m_HasLooped=1;	//register that we have dealt with the current loop
+			m_AudioSource.Play(catchup);//play a sample with the correct delay to coincide with the actual loop point
+			}
+		}
+              }
+</pre>
+<p>There’s a bit more discussion and some extensions of the technique discussed at <a href="http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/">http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/</a> </p>
+<h2>Video Feedback effect in Unity</h2>
+<p>I wanted AvSeq to feature some form of video feedback, discovered in camera/tv loop experiments of the 1980s. You can see the effect in this video <a href="https://www.youtube.com/watch?v=eD9rr0gTLSU">https://www.youtube.com/watch?v=eD9rr0gTLSU</a> (although its a recent video, the actual technique is the same). To achieve this I mimicked the feedback loop by rendering a subset of the games geometry to an offscreen surface and then drawing that image in the background of the scene. This meant that each frame of gameplay also had a degree of the previous frame set behind the current objects. By altering the transparency of the previous frame image the system can control the amount of feedback and blur that occurs. The scene setup for this process is show below.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubAvseq2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<ul>
+<li>A: Shows the scene from a point close to the player perspective, but with the camera pulled back slightly to show the edges of the background screen. The image shows the foreground cubes and their after-images on the background screen (one cube is even passing through the background screen)</li>
+<li><br>B: Shows the positioning of the background screen and the ‘invisible’ offscreen rendering camera. The cubes can easily be seen in front of the screen, within the normal playspace of the game.</li>
+<li><br>C: shows the image viewed from the offscreen rendering camera. This image is then drawn onto the background screen during the next frame.</li>
+</ul>
+<p>Some compensation has to be made to account for offscreen texture surfaces being square and the scene view being landscape, but these are trivial ratio adjustments. In AvSeq I used additive blending on the background screen, in order to control the persistence of each frame and its feedback, but other blending methods can be used to generate more radical effects. Similarly the polygon mesh of the background plane can be warped to force the feedback to flow in a specific direction. Although I avoided extreme warping in the final game version, some of the prototypes demonstrate the effect more clearly.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubAvseq3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>Obviously the effect is best observed in motion.</p>
+<div class="post__iframe"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/DvJ1bsjDpz4" allowfullscreen="allowfullscreen"></iframe></div>
+<p>The video above shows the feedback working with different levels of persistence, it also shows some additional layering effects that are introduced between the background screen and the camera depending on the progress of the music. It is important to note that the whole process requires a secondary render camera. This is because if the system uses the primary camera for the feedback render then the resulting image will involve feedback of every visible element. By using a secondary camera specifically for the feedback image the game objects can be separated into layer-masks that appear in the feedback layer, the game layer or both.</p>
+</article>
+</div>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Castle generation – In Ruins</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/castle-generation-in-ruins.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/castle-generation-in-ruins.html</id>
+            <category term="Procedural Generation"/>
+            <category term="Game Development"/>
+            <category term="Explainer"/>
+
+        <updated>2025-10-04T19:15:52+01:00</updated>
+            <summary>
+                <![CDATA[
+                    This post outlines some of the technical issues and solutions connected with&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="entry-header">
+<h1 class="entry-title"><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubInRuins1.jpg" alt="" width="100%/" data-is-external-image="true"></h1>
+</div>
+<div class="entry-container">
+<div class="entry-content">
+<article>
+<p>This post outlines some of the technical issues and solutions connected with the development of In Ruins, the second game produced for my PhD research.</p>
+<p>In Ruins is an ambient exploration game with simple platforming and power up mechanics. It’s based on a small island of ruined castle walls and crumbling towers. This environment is procedurally generated using an extension of some traditional rogue-like dungeon generation techniques. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/in-ruins">available at this link</a>. A description of the approach developed for In Ruins is outlined below.</p>
+<h2>2D Dungeon-like world generation stage</h2>
+<p>Although the world of In Ruins is 3D the architectural blueprint is based on a 2D floorplan generator. This generator can produce a range of layouts as illustrated below.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The generator is based on some of the ideas outlined in the <a href="http://donjon.bin.sh/d20/dungeon/">d20 Random Dungeon Generator</a> and operates in the following manner.</p>
+<ul>
+<li> A world definition dictates the number of desired ‘rooms’ and the range of dimensions (width/height) of those rooms. This definition also describes the overall dimension of the world, which is used to build a 2d array grid that is used for the placement and arrangement of rooms, corridors and doorways. The definition allows for ranges of variation in parameters such as room size, corridor length and floor height.</li>
+<li>A function AddRooms() attempts to place the desired number of rooms into the total base grid. There are a few placement routines that allow symmetrical layouts, sparse layouts, linear and constrained layouts etc. Each routine checks the validity of any newly placed room against the location of all previously placed rooms (checking for the intersection of walls and floor areas). The placement functions also ensure that there is sufficient space between rooms to allow for corridors and to avoid walls overlapping to double thickness. This is achieved by trapping all the placement locations and room dimensions to EVEN co-ordinates and room dimensions to ODD sizes. This ensures that the connections between rooms will line up correctly. When placing rooms in the grid the algorithm marks individual cells in the interiors as room tiles and those on the perimeter as wall tiles. This helps when checking the validity of subsequent room placements and also helps when locating doorways. Whne a room is placed it is recorded in a list, storing its ID, its x,y location and its</li>
+<li>A function AddExits() places a number of exits in the wall perimeter of a room, it uses the centre-point and dimensions recorded for a room to calculate the location of potential exits which are then checked against the grid to see if the cells are currently marked as walls. If the exit is valid then the cell is marked as a doorway in the master grid.</li>
+<li>The system then executes the AddCorridors() function. This steps through the master grid and whenever it encounters a cell marked as a doorway it attempts to ‘grow’ a corridor. The corridors are made by placing corridor tiles in a series of spans, starting at the discovered exit. Each span is of 2 cells length, to ensure it remains on the correct odd/even spacing and will connect to other doors. The corridors are then recursively generated from the endpoint of the last span. There is a chance for corridors to change direction or split at the end of any span. The probability of this is controlled by a series of variables in the general world definition.</li>
+</ul>
+<p>The image below demonstrates these features as follows: empty grid cells are black, corridors are white, room outer walls are red, doorways are green and the interior of each room is assigned a random colour. Door cells also indicate their exit direction, n,s,e,w and interior room cells also store their unique id. This allows later functions to decorate or alter each room specifically. A webplayer of this prototype is available <a href="http://www.nullpointer.co.uk/unity/rogue/WebPlayer.html">here </a>to demonstrate the algorithms.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/rogue2d.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>5. The system then extends this 2D floorplan by assigning floor heights to each room. The corridor cells also have height levels that are adjusted dependent on the room heights that they connect to. The corridor heights are modified in a recursive process that creates stairs between connected room of different heights. The plan is then used to generate a 3D ‘maze’. Rather than rooms being enclosed as they would be in a traditional rogue-like, each room is treated as a plateau. This leads to the construction of spaces like the one in the image below. </p>
+<h2>3D Extension to the generation</h2>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/rogue3d3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The construction process of the 3D version was then extended with the placement of various prop items and the variation of block forms.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins4.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The range of styles possible is quite large, as indicated in the following images.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>To ensure that the resulting 3D model is graphically efficient the code that constructs the world from the floorplan calculates the neighbours for each cell and selects a 3D block that connects appropriately to adjacent cells. The image below shows the 16 blocks designed for all the possible connections in a Von Neumann neighbourhood. A good explanation of how this technique works for traditional tile games can be found <a href="http://www.angryfishstudios.com/2011/04/adventures-in-bitmasking/">here</a>.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins5.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The mesh construction could be done procedurally, but by using a Look-Up table of prefab forms the code can substitute alternatives to create a more varied and organic look. A selection of three cube forms and their variations is illustrated below. The cubes themselves are also textured procedurally, using a custom tri-planar mapping technique. This means that however tall the individual columns become the texturing on the will not stretch or deform. This shader technique will be covered in a future post.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins6.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The final stage of generation involves dropping pre-designed tree models and grass prefabs onto the geometry. This is done by selecting a room from the list of those placed and then positioning the items within the rooms dimension and at the height the room is set to. This process could also be used to place specific items in specific rooms or place objects adjacent to walls or doors.</p>
+</article>
+</div>
+</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Infinite Racetracks – Permutation Racer</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/infinite-racetracks-permutation-racer.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/infinite-racetracks-permutation-racer.html</id>
+            <category term="Procedural Generation"/>
+            <category term="Game Development"/>
+            <category term="Explainer"/>
+
+        <updated>2025-10-04T19:09:35+01:00</updated>
+            <summary>
+                <![CDATA[
+                    This post outlines some of the technical issues and solutions connected with&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="entry-header">
+<h1 class="entry-title"><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubPerm1.jpg" alt="" width="100%/" data-is-external-image="true"></h1>
+</div>
+<div class="entry-container">
+<div class="entry-content">
+<article>
+<p>This post outlines some of the technical issues and solutions connected with the development of Permutation Racer, the third game produced for my PhD research.</p>
+<p>Permutation Racer is an experimental, endless racing game, exploring the procedural construction of space.<br>It’s part of an ongoing investigation of ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. The objective is simply to travel as far as possible. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/permutation-racer">available at this link</a>. A description of the approach developed for Permutation Racer is outlined below.</p>
+<h2>Endless Voxel Track</h2>
+<p>Permutation Racer uses Voxel Isosurfaces to produce its endless tracks. This technique is based on the marching cubes algorithm, a process which transforms a 3d array of density points into a polygonised mesh. There is some good documentation of this technique available <a href="http://paulbourke.net/geometry/polygonise/">here</a>. In short these polygonising algorithms take an array of density values, like a point cloud and traverse the array in voxels, marking the points where the density values shift from interior to exterior values. The difference between ‘inside’ and ‘outside’ is defined as a threshold value, usually between 0 and 1 (though this can be -1 to +1 depending on the density values used). The threshold value dictates the point in a density spectrum where the voxel ‘skin’ lies. For example, if the threshold value was .1 the following string of numbers would be skinned as a small hill-like curve .2 .3 .4 .5 .4 .3 .2. If the threshold was raised to .6 nothing would be polgonised as all the density values are under the threshold. A solidity threshold closer to 0 leads to ‘fuller’ forms whereas a higher values result in a more sparse voxel space. Since Permutation Racer uses a mathematical noise field (simplex) to provide the underlying density values, increasing the frequency of the noise function will also effect the size and number of voxelised ‘blobs’ polygonised in a chunk. The image below demonstrates the sort of effects these parameters can have (density threshold on the y-axis and frequency of noise on the x-axis).</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/VoxelCubes.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The resolution of the voxel grid is entirely down to the requirements of the game, but a more detailed resolution and larger volume will obviously take longer to calculate. The process of voxelisation is therefore best seperated into individual chunks, so that the game world can be defined/polygonised/rendered/culled on threads. In Permutation Racer each chunk of world consists of a cubic volume containing x=22,z=22,y=16 voxels. The resolution of the resulting mesh can be seen in the chunks below.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm4.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>These chunks are processed in threads and positioned in the game scene in a linear path to build the racetrack. The image below demonstrates a range of individual chunks, produced from different underlying point cloud data.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>In the actual game the adjacent chunks that make up the racertrack polygonise adjoining areas of the density array so that chunks remain continuous and readable.</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm5.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>The image below shows a long section of track, click <a href="http://www.nullpointer.co.uk/images/testrack.gif">here </a>to open the image and zoom in to see the details</p>
+<p><a href="http://www.nullpointer.co.uk/images/testrack.gif"><img loading="lazy" src="http://www.nullpointer.co.uk/images/testrack.gif" alt="" width="100%/" data-is-external-image="true"></a></p>
+<h2>Noise to Signal</h2>
+<p>As with all procedural generation the key to making the resulting world interesting is making the underlying structure interesting. The image of voxel cubes earlier in this post demonstrates the sort of features a simple noise field can create. However, the results are very chaotic and don’t feel organic or purposeful. Players generally enjoy exploring worlds that appear to have either history and purpose, and seem to have been created though geological processes or human intervention. Permutation Racer uses a series of synthesis approaches to generate interesting underlying data forms. These synthesis techniques are primarily based on the layering and filtering of fractal noise. In fact the term synthesis neatly references the approach of musical synthesizers which use similar techniques to layer waveforms into richer and more interesting sound forms. This process is illustrated below (courtesy of http://www.planetoftunes.com/,https://documentation.apple.com/en/logicpro/)</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/synthesis.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>There are many types of synthesis, additive (shown above left) , subtractive and FM (frequency modulation,shown above right). Permutation Racer uses all of these techniques, but applies them to the output of noise functions rather than waveforms. Noise functions (simplex/perlin etc don’t have periodic cycles, but can be smoothed and produced at varying frequencies). The way these functions are layered gives the resulting forms specific characteristics. In Permutation Racer noise layers are modulated by each other and by other mathematical processes such as sinewaves and rounding functions. The image below demonstrates how the main track uses a combined sinewave function to produce the curves in the racetrack. The distortion or ‘curviness’ of the track is increased along the x axis, where the x-value in world space is used to multiply a secondary waveform that distorts the original sinewave (see the FM example above).</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm6.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>This function is calculated for every x,y,z point requested by the polygonising algorithm. Instead for returning unmodified noise, the program returns a noisefield that is modified by many attributes, all of which are based on the spatial location of the request. For example, the GetNoise(x,y,z) function will return 1 for all points that are outside the current sine centre plus a margin amount. This causes the track to follow the sinewave curve and have cliff-walls at its sides. The width of the track is then controllable with the margin variable, which itself can be linked to x distance and other noise function. The GetNoise() function might also introduce increasing amounts of random noise as the y-axis rises over a specific ceiling. This will cause spikes and undulations to form a ceiling over the track. Its the development and combination of these filters that allows the engine to produce interesting geometry.</p>
+<p>Permutation Racer contains a library of GetNoise() functions that produce different terrain; forests, tunnels, corridors, causeways. In fact the game simultaneously calculates two types at all times and interpolates the results before passing the final value back to the polgonising algorithm. This allows the gameworld to blend between different terrain forms as the player progresses. The image below (from an early prototype) shows a forest generation function (left) mixed with a cave generation function (Right).</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm7.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<p>It only takes a few modifications to use the techniques discussed above for generating a wide range of different game worlds, even spherical ones!</p>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm8.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+</article>
+</div>
+</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Installation Art</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/installation-art.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/installation-art.html</id>
+            <category term="Procedural Generation"/>
+            <category term="Installation Art"/>
+
+        <updated>2025-10-04T19:01:52+01:00</updated>
+            <summary>
+                <![CDATA[
+                    I have worked on a range of installations and interactives for galleries,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="entry-header">
+<p class="entry-title"><span style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;">I have worked on a range of installations and interactives for galleries, museums and public events and can act as designer, programmer and artist depending on the specific job. A brief selection of project is listed below, more information is available on request.</span></p>
+<hr></div>
+<div class="entry-container">
+<div class="entry-content">
+<article>
+<h2><strong>The Wilding Of Mars</strong></h2>
+<figure id="attachment_1627" class="wp-caption alignnone"><figure class="size-full wp-image-1627"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen.jpg" sizes="(max-width: 5315px) 100vw, 5315px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-150x98.jpg 150w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-300x195.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-1024x667.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen.jpg 5315w" alt="Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum" width="5315" height="3463" data-is-external-image="true"></figure>
+<figcaption class="wp-caption-text">Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum</figcaption>
+</figure>
+<br>I was approached by the studio of <a href="https://www.daisyginsberg.com/studio.php" rel="noopener" target="_blank">Alexandra Daisy Ginsberg</a> to design software for the Wilding of Mars Project. The project is described as follows.
+<p><em>Human dreams of colonisation are not limited to Earth. We see Mars, untouched by Earth life as barren, treacherous, beautiful; another planet to colonise. But humans invariably become exploiters. Instead, could we imagine Mars colonised only by plants, flourishing without us? The Wilding of Mars simulates the growth of a planetary wilderness, seeded with Earth life forms. In exhibition, a wild garden on Mars thrives over millennia, its growth visible over human hours. The pioneers are seeded in stages as conditions become more tolerable. The plants spread north from the South Pole, developing an ecosystem determined by global and local parameters of water, temperature, and nutrients.</em></p>
+<figure class="alignnone size-full wp-image-1625"><br><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/marsscape1.jpg" sizes="(max-width: 1908px) 100vw, 1908px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1-300x157.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1-1024x536.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1.jpg 1908w" alt="marsscape1" width="1908" height="999" data-is-external-image="true"></figure>
+<p>I worked with Daisy and the team to develop a software simulation that would represent the possible outcomes of a martian rewilding. The project required a complex simulation that would calculate the spread of multiple species across a variety of terrains. My code took into account local environmental factors such as water, gas and soil nutrition in order to calculate the spread of thousands of simulated plant entities across the three martian seeding locations. Each species creates a ‘map’ of growth across the terrain and is also capable of mutating in ways that effect both its performance and its aesthetic form.</p>
+<figure class="alignnone size-full wp-image-1623"><br><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01.jpg" sizes="(max-width: 3820px) 100vw, 3820px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01-300x169.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01-1024x576.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01.jpg 3820w" alt="190517_The Wilding of Mars_still_01" width="3820" height="2148" data-is-external-image="true"></figure>
+<p>In addition to large scale aerial views each simulated location featured a close up view of successful plants growing in small scale local environs. The 3d models for these plants were generated from abstracted structural form data (stored in a similar structure to an L-System) which allowed them represent aesthetic mutations that might have occurred throughout the life of the species (potentially over millions of years). The origin (seed) species were structured as their real-world equivalents are, but over time these forms could mutate into new variant species.</p>
+<figure id="attachment_1628" class="wp-caption alignnone"><figure class="size-full wp-image-1628"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen.jpg" sizes="(max-width: 5315px) 100vw, 5315px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-150x92.jpg 150w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-300x184.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-1024x628.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen.jpg 5315w" alt="Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum" width="5315" height="3262" data-is-external-image="true"></figure>
+<figcaption class="wp-caption-text">Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum</figcaption>
+</figure>
+The work shows different seeding locations on mars, with each terrain displaying both a large scale view of the current growth maps and smaller scale views where the individual plants could be represented.</article>
+<article></article>
+<article><figure class="alignnone size-full wp-image-1624"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02.jpg" sizes="(max-width: 3820px) 100vw, 3820px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02-300x169.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02-1024x576.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02.jpg 3820w" alt="190517_The Wilding of Mars_still_02" width="3820" height="2148" data-is-external-image="true"></figure></article>
+<article></article>
+<article></article>
+<article><span style="font-size: inherit;">A record of the evolved forms is output over the course of the simulation, storing the lifespan of species, their forms and their performance.</span>
+<figure class="alignnone size-full wp-image-1630"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox.png" sizes="(max-width: 654px) 100vw, 654px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox-275x300.png 275w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox.png 654w" alt="2019-07-27 16_18_39-Descendants - Dropbox" width="654" height="714" data-is-external-image="true"></figure>
+<hr>
+<h2>Flutter</h2>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/buttercap1.jpg" alt="" width="100%" align="alignnone" data-is-external-image="true"></p>
+<p>For this project I designed and wrote software that brought paper-craft made butterflies to life and then recorded each entity to a database. Visitors to the installation were invited to design their own butterfly on card in a series of craft workshops and the resulting paper models were scanned and trimmed by my application into a textures that were then used to generate 3d butterflies. These 3d versions flew around the workshop space (at the southbank centre and later at the millennium galleries) and the participants could find their own contribution fluttering amongst the growing flock.</p>
+<p> </p>
+<center><img loading="lazy" src="http://www.nullpointer.co.uk/images/butter2.jpg" alt="" align="alignnone" data-is-external-image="true"></center>
+<p> </p>
+<p>Each butterfly was linked to an id and QR code which could be returned to the exhibition and when placed in view of a local scanner would call the related butterfly back into the installation projector scene.</p>
+<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" src="http://player.vimeo.com/video/5189909" frameborder="0" name="fitvid0" data-mce-fragment="1"></iframe></div></div>
+<p>A later iteration resulted in over 1400 butterflies being created in 13 school workshops across South Yorkshire. Laura Mundy and Janet Jennings ran the workshops, producing a vast database of butterflies that were brought to life on data projectors during the workshops and then stored for later. After all the workshops had been completed where was an exhibition at the Millenium Galleries in Sheffield where children could bring their butterflies back to life in the installation by visiting with their original paper versions.</p>
+<p> </p>
+<center><img src="http://www.nullpointer.co.uk/images/flutterwork.jpg" alt="" width="350" data-is-external-image="true"><img loading="lazy" src="http://www.nullpointer.co.uk/images/flutterwork2.jpg" alt="" width="350" data-is-external-image="true"></center><hr>
+<h2>UntitledApplication</h2>
+<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/expodance.jpg" alt="" width="100%" data-is-external-image="true"></p>
+<p>Untitled Application is an interactive sound piece commissioned by MAAP and SAM for the Leeds Expo. Its an open air work hosted on one of the BBCs ‘big screens’, a range of large outdoor LCD displays in major cities of the UK. The piece itself was produced for the LEEDs Expo, a festival of sound art.</p>
+<p>The work is a two part application. The visual part is written in C++ using openframeworks and opencv. It takes a council CCTV camera as a video feed and performs a series of motion tracking, blob detection functions on the input. Audience movement is used to trigger simple graphic elements on the screen which are superimposed on the camera image. People can generate interactive patterns through their physical movement across the city square.</p>
+<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" src="http://player.vimeo.com/video/6782757" frameborder="0" name="fitvid1" data-mce-fragment="1"></iframe></div></div>
+<p>The second phase of the system is a synthesis engine written in PD (puredata) which communicates via OSC to the C++ application. When a person triggers an animation in a particular area of the screen a message is sent to the synthesis app which plays an apporpriate tone. The notes are selected from three sets of harmonic scales and underpinned by a phased/droning 4 note sitar stye chord. The notes themselves alter pitch and timbre depending on the players behaviour and the generative variables in the synthesis system. Each of the three tonal sets rlates to a specific graphic style in the visuals.</p>
+<p>It’s been great to see people playing with the piece and working out how to draw/compose with bikes, buggies, wheelchairs, skateboards and even spacehoppers.</p>
+</article>
+</div>
+</div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Academic Practice</title>
         <author>
             <name>me</name>
         </author>
@@ -26,16 +286,15 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1.jpg" alt="" width="800" height="534" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xl.jpg 1024w"></figure>
-<p><br><em>Presenting my work at the Museo Tamayo, Mexico City</em></p>
-<p>I am an experienced lecturer and academic with a PhD exploring “the digital sublime in videogames”. This research investigates the philosophical and conceptual considerations of using procedural generation and generative processes in game design. Some of the technical research i produced for my thesis is available <a href="http://www.nullpointer.co.uk/content/category/tech-2/" rel="noopener" target="_blank">here</a>, and the games I produced for the PhD are covered <a href="http://www.nullpointer.co.uk/content/completed-games/" rel="noopener" target="_blank">here</a>.</p>
-<p>In parallel to working on my PhD I also taught at The University of Huddersfield as a cross-department practicing lecturer between the school of Art,Design &amp; Architecture and the school of Computing. In this role i taught a range of modules from foundation programming (xna/unity) to Critical Game theory. During this time i also provided tutorial support and workshops for the students. Since that time I have been a visiting lecturer for both the University of Sussex and The University of Brighton.</p>
-<p>I have contributed to various publications and conferences including a chapter on procedural generation for the <a href="https://www.amazon.co.uk/Handbook-Digital-Games-Marios-Angelides/dp/1118328035" rel="noopener" target="_blank">Handbook Of Digital Games</a>, and a paper on Gestalt perception for <a href="http://www.digra.org/digital-library/authors/betts-tom/" rel="noopener" target="_blank">DIGRA</a>. I have delivered varioustalks for Universities, professional groups and musuems, including presenting at GDC (San Francisco), FreePlay (Melbourne), The Bartlett (London) and Unite (Malmo).</p>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1.jpg" alt="" width="800" height="534" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xl.jpg 1024w"></figure><em>Presenting my work at the Museo Tamayo, Mexico City</em></p>
+<p>I am an experienced lecturer and academic with a PhD exploring “the digital sublime in videogames”. This research investigates the philosophical and conceptual considerations of using procedural generation and generative processes in game design. </p>
+<p>In parallel to working on my PhD I also worked at <em>The University of Huddersfield</em> as a cross-department practicing lecturer between the school of <em>Art,Design &amp; Architecture</em> and the S<em>chool of Computing</em>. In this role i taught a range of modules from foundation programming (xna/unity) to Critical Game theory. During this time i also provided tutorial support and workshops for the students. Since that time I have been a visiting lecturer for both<em> The University of Sussex</em> and <em>The University of Brighton</em>.</p>
+<p>I have contributed to various publications and conferences including a chapter on procedural generation for the <a href="https://www.amazon.co.uk/Handbook-Digital-Games-Marios-Angelides/dp/1118328035" rel="noopener" target="_blank">Handbook Of Digital Games</a>, and a paper on Gestalt perception for <a href="http://www.digra.org/digital-library/authors/betts-tom/" rel="noopener" target="_blank">DIGRA</a>. I have delivered various talks for Universities, professional groups and musuems, including presenting at GDC (San Francisco), FreePlay (Melbourne), The Bartlett (London) and Unite (Malmo).</p>
             ]]>
         </content>
     </entry>
     <entry>
-        <title>About The Games</title>
+        <title>Game Development</title>
         <author>
             <name>me</name>
         </author>
@@ -51,17 +310,17 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="840" height="504" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="203" height="122" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
 <p>I have over 10 years of design and programming experience, producing client driven projects, teaching game design at University level and creating cutting edge game-projects for Phd research. I work mainly in Unity, but I also have experience of working with c++, openframeworks, developing for Ios &amp; Android platforms and Nintendo Switch.</p>
 <p>I have worked on many aspects of design and programming including; AI, UI, UX, level design, VFX, sound design, game mechanics, physics, animation, shaders. I have produced several projects as a solo developer, but I am also used to working in teams, directing art/sound/animation, defining additional programming, managing production, workflow, testing, releases and repositories.</p>
 <p>For 7 years i worked in a small team, making games as part of Big Robot ltd, but since 2018 I have been producing games through my own company Nullpointer Exception ltd.</p>
 <p>I have given presentations about creative coding and game design at various international venues including GDC (San Francisco), Indievelopment (Amsterdam), Rezzed (UK). I have a Phd in philosophy &amp; game design and have a specific interest in procedural generation and generative art.</p>
+<p>You can read more about my work by exploring the <em>Recommended Topics</em> listed to the right of this page.</p>
 <p>The games listed below each have their own info page (on steam/itch etc), but more info is also available on request.</p>
 <div class="fluid-width-video-wrapper"> </div>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/ZsxS8EntqOM" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p><br><a href="https://store.steampowered.com/app/853240/The_Light_Keeps_Us_Safe/" rel="noopener" target="_blank">THE LIGHT KEEPS US SAFE</a></p>
 <p>The Light Keeps Us Safe is a procedurally-generated apocalypse in which only The Light can save us. Use stealth and evasion to avoid terrifying machines that patrol the desolate world, and employ the powers of Light to unpick their deadly traps. Early access, due for release 2019</p>
-<p><a href="https://store.steampowered.com/app/853240/The_Light_Keeps_Us_Safe/" rel="noopener" target="_blank">Available on Steam</a></p>
 <div class="fluid-width-video-wrapper">
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/Xqw5EQ0j7Po" allowfullscreen="allowfullscreen"></iframe></figure>
 </div>
@@ -69,58 +328,48 @@
 <p>The Signal From Tölva is an open-world first-person shooter set on a distant, haunted, future world. Unlock savage weapons and recruit robots to fight alongside you as rival factions struggle to discover the source of the mysterious signal. What you discover will decide the fate of a world.</p>
 <p>“A lean, intelligent sci-fi shooter with a watchmaker’s eye for detail.”<br><em>80% – PC Gamer</em></p>
 <p>“An open-world wasteland game of unusual profundity.”<br><em>Eurogamer</em></p>
-<p>“It’s like being gently hugged by a strange cloud that occasionally fires lasers.”<br><em>Cool Ghosts</em><br><a href="https://store.steampowered.com/app/457760/The_Signal_From_Tlva/" rel="noopener" target="_blank">Available on Steam</a></p>
+<p>“It’s like being gently hugged by a strange cloud that occasionally fires lasers.”<br><em>Cool Ghosts</em></p>
 <div class="fluid-width-video-wrapper">
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/akrT77X-IZA" allowfullscreen="allowfullscreen"></iframe></figure>
 </div>
 <p><br><a href="https://store.steampowered.com/app/242880/Sir_You_Are_Being_Hunted/" rel="noopener" target="_blank">SIR YOU ARE BEING HUNTED</a></p>
 <p>Sir, You Are Being Hunted is a procedurally-generated British horror in which tweed-wearing robots hunt you for sport. Roam the landscape, scavenge for food, hide breathlessly in the undergrowth, flee in terror, and even fight back with stolen weapons.</p>
 <p>Sir is a stealth and survival game unlike any other, set on a mysterious archipelago generated procedurally by you, and therefore unique to each game you play. You can define your own islands, each one created in moments by our rather clever British Countryside Generator. These islands are then populated by a raving aristocracy of murderous robots, their robot hounds, and worse. You job is simply to survive, and get home.</p>
-<p><a href="https://store.steampowered.com/app/242880/Sir_You_Are_Being_Hunted/" rel="noopener" target="_blank">Available on Steam</a></p>
-<div class="fluid-width-video-wrapper"> </div>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/nvVdMr6ox9A" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p><br><a href="https://tomnullpointer.itch.io/permutation-racer" rel="noopener" target="_blank">PERMUTATION RACER</a></p>
 <p>Permutation Racer’ is an experimental, endless racing game, exploring the procedural construction of space.</p>
 <p>It’s part of my PHD research to investigate ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. I might post a more technical article about the actual methods used later. The only aim is to travel as far as possible, hampered by the fact that over time/distance the generation algorithms make the track more hazardous and convoluted.</p>
-<p><a href="https://tomnullpointer.itch.io/permutation-racer" rel="noopener" target="_blank">Available on itch.io</a></p>
 <p><img loading="lazy" src="https://img.itch.zone/aW1hZ2UvNDk1NDQvMjE3MDA0LmpwZw==/original/mGvqB%2F.jpg" alt="screenshot" width="100%" data-is-external-image="true"></p>
 <p><a href="https://tomnullpointer.itch.io/in-ruins" rel="noopener" target="_blank">IN RUINS</a></p>
 <p>‘In Ruins’ is an experimental, ambient game examining the procedural construction of space. It’s part of an ongoing Phd research project to investigate ideas that connect games, permutation and the sublime. It’s part of a series of games inspired by artistic interpretations of the sublime, in this case the work of Romantic landscape painters (Thomas Cole, Caspar David Friedrich etc). Its also heavily influenced by Fumito Uedas Ico series.</p>
 <p>The player is deposited on the edge of a procedurally generated island. The island consists of overgrown pathways ruined spires and broken ramparts. A central tower looms above the island beckoning the player towards it.</p>
-<p><a href="https://tomnullpointer.itch.io/in-ruins" rel="noopener" target="_blank">Available on itch.io</a></p>
-<div class="fluid-width-video-wrapper"> </div>
 <figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/X4APyGuD0lg" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
-<p><br><a href="https://store.steampowered.com/app/207670/AVSEQ/" rel="noopener" target="_blank">AVSEQ</a></p>
+<figure class="post__video"><a href="https://store.steampowered.com/app/207670/AVSEQ/" rel="noopener" target="_blank">AVSEQ</a></figure>
 <p>AVSEQ is an audio-visual sequencer puzzle game. Connect falling atoms to unlock near-endless varieties of music at each stage. Every level of AVSEQ is a music sequencer with 2.2300745198530623×10^43 possible audio permutations, that’s 22 tredecillion in total!</p>
-<p><a href="https://store.steampowered.com/app/207670/AVSEQ/" rel="noopener" target="_blank">Available on Steam</a></p>
             ]]>
         </content>
     </entry>
     <entry>
-        <title>About Nullpointer</title>
+        <title>About Me</title>
         <author>
             <name>me</name>
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/about-me-post.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/about-me-post.html</id>
-        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T11:49:01+01:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" alt="" />
-                    Tom Betts, aka Nullpointer, is an artist, academic and coder with a&hellip;
+                    I'm Tom Betts, aka Nullpointer, an artist, academic and coder with a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" class="type:primaryImage" alt="" /></p>
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" alt="" width="599" height="505" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-xl.png 1024w"></figure>
-<p>Tom Betts, aka Nullpointer, is an artist, academic and coder with a PhD exploring “the digital sublime in videogames”. He was the lead programmer at game development studio <a href="http://www.big-robot.com/" target="_blank" rel="noopener">Big Robot</a>, responsible for games such as “Sir, You are being Hunted”, “The Signal From Tolva” and “The light will keep us safe”. Now he runs his own game development studio Nullpointer Games.</p>
-<p>He is a published musician, and has performed and delivered talks at international events such as DIGRA, FreePlay, UNITE, Sonar, Rezzed and Indievelopment. He has shown his digital artwork at the ICA, ZKM, New museum(NY) and the Rotterdam film festival and has worked on projects for the Tate, V&amp;A and Southbank Centre. He likes generative systems, green tea, watching films where nothing much happens, the colour grey and ironing.</p>
-<p>On this site you can find a semi-regular feed of proc-gen experiments and information on completed games.</p>
-<p>You can find him on bluesky at @tomnullpointer. Some older material is still available on <a href="http://www.youtube.com/user/tomnullpointer">youtube</a> and <a href="http://vimeo.com/user1356993">vimeo</a> and the old nullpointer site is archived <a href="http://www.nullpointer.co.uk/-/home.htm" target="_blank" rel="noopener">here</a> (more details on my art career and some music stuff)</p>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic-2.png" alt="" width="599" height="505" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-xl.png 1024w"></figure>
+<p>I'm Tom Betts, aka Nullpointer, an artist, academic and coder with a PhD exploring “the digital sublime in videogames”. I was the lead programmer at game development studio <a href="http://www.big-robot.com/" target="_blank" rel="noopener">Big Robot</a>, responsible for games such as “Sir, You are being Hunted”, “The Signal From Tolva” and “The light will keep us safe”. Now I run my own game development studio Nullpointer Games.</p>
+<p>I am a published musician, and have performed and delivered talks at international events such as DIGRA, FreePlay, UNITE, Sonar, Rezzed and Indievelopment. I have shown my digital artwork at the ICA, ZKM, New museum(NY) and the Rotterdam film festival and I've worked on projects for the Tate, V&amp;A and Southbank Centre. </p>
+<p>You can find me on bluesky at <a href="https://bsky.app/profile/tomnullpointer.bsky.social" target="_blank" rel="noopener noreferrer">@tomnullpointer</a>. Some older material is still available on <a href="http://www.youtube.com/user/tomnullpointer">youtube</a> and <a href="http://vimeo.com/user1356993">vimeo.</a></p>
 <p>You can contact me at the obvious email address (This is my website, my name is tom).</p>
             ]]>
         </content>
