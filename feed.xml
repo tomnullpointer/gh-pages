@@ -3,7 +3,7 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-10-04T22:55:01+01:00</updated>
+    <updated>2025-10-05T10:15:15+01:00</updated>
     <author>
         <name>me</name>
     </author>
@@ -16,16 +16,19 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/cv-bio.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/cv-bio.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/15/Bio-data-format-2-724x1024-3615278986.jpg" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T21:40:47+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/15/Bio-data-format-2-724x1024-3615278986.jpg" alt="" />
                     Employment Nullpointer Ltd [Brighton] 2000 – present Director Responsible for the development&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/15/Bio-data-format-2-724x1024-3615278986.jpg" class="type:primaryImage" alt="" /></p>
                 <h2>Employment</h2>
 <p><strong>Nullpointer Ltd </strong>[Brighton] 2000 – present<br><em>Director</em><br>Responsible for the development and direction of a creative digital<br>studio that has exhibited internationally, produced multiple game titles<br>and worked for clients such as Tate, the V&amp;A and The Southbank Centre.</p>
 <p><br><strong>Big Robot Ltd  </strong>[Brighton/Bristol] 2011 – 2020<br><em>Lead Programmer</em><br>Responsible for directing and implementing code/design for four<br>commercial games.</p>
@@ -49,17 +52,20 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/game-jams-and-freebies.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/game-jams-and-freebies.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/14/2025-10-04-22_31_47-Publii-md.png" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Game Development"/>
 
         <updated>2025-10-04T21:37:42+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/14/2025-10-04-22_31_47-Publii-md.png" alt="" />
                     This is a short list of some of the side projects and&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/14/2025-10-04-22_31_47-Publii-md.png" class="type:primaryImage" alt="" /></p>
                 <figure>This is a short list of some of the side projects and game jam contributions I have produced over the years. A full list is available on my <a href="https://tomnullpointer.itch.io/" target="_blank" rel="noopener noreferrer">itch.io page</a>.</figure>
 <h2><a href="https://tomnullpointer.itch.io/jeliens" target="_blank" rel="noopener noreferrer">Jeliens</a><br><figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/14/2025-10-04-22_31_47-Publii.png" alt="" width="721" height="445" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/14/responsive/2025-10-04-22_31_47-Publii-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/14/responsive/2025-10-04-22_31_47-Publii-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/14/responsive/2025-10-04-22_31_47-Publii-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/14/responsive/2025-10-04-22_31_47-Publii-xl.png 1024w"></figure></h2>
 <p>A Jellyfish generator developed for ProcJam2019. It uses realtie mesh generation and shader based animations to create a range of alien jellyfish (Web Player)</p>
@@ -84,19 +90,24 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Game Development"/>
             <category term="Explainer"/>
+            <category term="Archive"/>
 
         <updated>2025-10-04T19:18:54+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" alt="" />
                     This post outlines some of the technical issues and solutions connected with&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubAvseq1.jpg" alt="" width="100%/" data-is-external-image="true"><br><br></p>
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" class="type:primaryImage" alt="" /></p>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq1.jpg" alt="" width="910" height="400" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-xl.jpg 1024w"></figure>
+<p><br><br></p>
 <div class="entry-content">
 <article>
 <p>This post outlines some of the technical issues and solutions connected with the development of AvSeq, the first game produced for my PhD research. More generalised information about the game is available <a href="http://www.nullpointer.co.uk/content/avseq-3/">here</a></p>
@@ -140,14 +151,14 @@
 <p>There’s a bit more discussion and some extensions of the technique discussed at <a href="http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/">http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/</a> </p>
 <h2>Video Feedback effect in Unity</h2>
 <p>I wanted AvSeq to feature some form of video feedback, discovered in camera/tv loop experiments of the 1980s. You can see the effect in this video <a href="https://www.youtube.com/watch?v=eD9rr0gTLSU">https://www.youtube.com/watch?v=eD9rr0gTLSU</a> (although its a recent video, the actual technique is the same). To achieve this I mimicked the feedback loop by rendering a subset of the games geometry to an offscreen surface and then drawing that image in the background of the scene. This meant that each frame of gameplay also had a degree of the previous frame set behind the current objects. By altering the transparency of the previous frame image the system can control the amount of feedback and blur that occurs. The scene setup for this process is show below.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubAvseq2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq2.jpg" alt="" width="1448" height="680" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-xl.jpg 1024w"></figure>
 <ul>
 <li>A: Shows the scene from a point close to the player perspective, but with the camera pulled back slightly to show the edges of the background screen. The image shows the foreground cubes and their after-images on the background screen (one cube is even passing through the background screen)</li>
 <li><br>B: Shows the positioning of the background screen and the ‘invisible’ offscreen rendering camera. The cubes can easily be seen in front of the screen, within the normal playspace of the game.</li>
 <li><br>C: shows the image viewed from the offscreen rendering camera. This image is then drawn onto the background screen during the next frame.</li>
 </ul>
 <p>Some compensation has to be made to account for offscreen texture surfaces being square and the scene view being landscape, but these are trivial ratio adjustments. In AvSeq I used additive blending on the background screen, in order to control the persistence of each frame and its feedback, but other blending methods can be used to generate more radical effects. Similarly the polygon mesh of the background plane can be warped to force the feedback to flow in a specific direction. Although I avoided extreme warping in the final game version, some of the prototypes demonstrate the effect more clearly.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubAvseq3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq3.jpg" alt="" width="912" height="412" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-xl.jpg 1024w"></figure>
 <p>Obviously the effect is best observed in motion.</p>
 <div class="post__iframe"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/DvJ1bsjDpz4" allowfullscreen="allowfullscreen"></iframe></div>
 <p>The video above shows the feedback working with different levels of persistence, it also shows some additional layering effects that are introduced between the background screen and the camera depending on the progress of the music. It is important to note that the whole process requires a secondary render camera. This is because if the system uses the primary camera for the feedback render then the resulting image will involve feedback of every visible element. By using a secondary camera specifically for the feedback image the game objects can be separated into layer-masks that appear in the feedback layer, the game layer or both.</p>
@@ -164,6 +175,7 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/castle-generation-in-ruins.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/castle-generation-in-ruins.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins4.jpg" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Game Development"/>
             <category term="Explainer"/>
@@ -171,13 +183,15 @@
         <updated>2025-10-04T19:15:52+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins4.jpg" alt="" />
                     This post outlines some of the technical issues and solutions connected with&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins4.jpg" class="type:primaryImage" alt="" /></p>
                 <div class="entry-header">
-<h1 class="entry-title"><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubInRuins1.jpg" alt="" width="100%/" data-is-external-image="true"></h1>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins1.jpg" alt="" width="912" height="398" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins1-xl.jpg 1024w"></figure>
 </div>
 <div class="entry-container">
 <div class="entry-content">
@@ -186,7 +200,7 @@
 <p>In Ruins is an ambient exploration game with simple platforming and power up mechanics. It’s based on a small island of ruined castle walls and crumbling towers. This environment is procedurally generated using an extension of some traditional rogue-like dungeon generation techniques. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/in-ruins">available at this link</a>. A description of the approach developed for In Ruins is outlined below.</p>
 <h2>2D Dungeon-like world generation stage</h2>
 <p>Although the world of In Ruins is 3D the architectural blueprint is based on a 2D floorplan generator. This generator can produce a range of layouts as illustrated below.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins3.jpg" alt="" width="908" height="803" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-xl.jpg 1024w"></figure>
 <p>The generator is based on some of the ideas outlined in the <a href="http://donjon.bin.sh/d20/dungeon/">d20 Random Dungeon Generator</a> and operates in the following manner.</p>
 <ul>
 <li> A world definition dictates the number of desired ‘rooms’ and the range of dimensions (width/height) of those rooms. This definition also describes the overall dimension of the world, which is used to build a 2d array grid that is used for the placement and arrangement of rooms, corridors and doorways. The definition allows for ranges of variation in parameters such as room size, corridor length and floor height.</li>
@@ -195,18 +209,18 @@
 <li>The system then executes the AddCorridors() function. This steps through the master grid and whenever it encounters a cell marked as a doorway it attempts to ‘grow’ a corridor. The corridors are made by placing corridor tiles in a series of spans, starting at the discovered exit. Each span is of 2 cells length, to ensure it remains on the correct odd/even spacing and will connect to other doors. The corridors are then recursively generated from the endpoint of the last span. There is a chance for corridors to change direction or split at the end of any span. The probability of this is controlled by a series of variables in the general world definition.</li>
 </ul>
 <p>The image below demonstrates these features as follows: empty grid cells are black, corridors are white, room outer walls are red, doorways are green and the interior of each room is assigned a random colour. Door cells also indicate their exit direction, n,s,e,w and interior room cells also store their unique id. This allows later functions to decorate or alter each room specifically. A webplayer of this prototype is available <a href="http://www.nullpointer.co.uk/unity/rogue/WebPlayer.html">here </a>to demonstrate the algorithms.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/rogue2d.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/rogue2d.jpg" alt="" width="596" height="448" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue2d-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue2d-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue2d-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue2d-xl.jpg 1024w"></figure>
 <p>5. The system then extends this 2D floorplan by assigning floor heights to each room. The corridor cells also have height levels that are adjusted dependent on the room heights that they connect to. The corridor heights are modified in a recursive process that creates stairs between connected room of different heights. The plan is then used to generate a 3D ‘maze’. Rather than rooms being enclosed as they would be in a traditional rogue-like, each room is treated as a plateau. This leads to the construction of spaces like the one in the image below. </p>
 <h2>3D Extension to the generation</h2>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/rogue3d3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/rogue3d3.jpg" alt="" width="794" height="596" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue3d3-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue3d3-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue3d3-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/rogue3d3-xl.jpg 1024w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins4-2.jpg" alt="" width="904" height="800" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins4-2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins4-2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins4-2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins4-2-xl.jpg 1024w"></figure>
 <p>The construction process of the 3D version was then extended with the placement of various prop items and the variation of block forms.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins4.jpg" alt="" width="100%/" data-is-external-image="true"></p>
 <p>The range of styles possible is quite large, as indicated in the following images.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins3.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins3-2.jpg" alt="" width="908" height="803" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins3-2-xl.jpg 1024w"></figure>
 <p>To ensure that the resulting 3D model is graphically efficient the code that constructs the world from the floorplan calculates the neighbours for each cell and selects a 3D block that connects appropriately to adjacent cells. The image below shows the 16 blocks designed for all the possible connections in a Von Neumann neighbourhood. A good explanation of how this technique works for traditional tile games can be found <a href="http://www.angryfishstudios.com/2011/04/adventures-in-bitmasking/">here</a>.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins5.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins5.jpg" alt="" width="712" height="271" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins5-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins5-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins5-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins5-xl.jpg 1024w"></figure>
 <p>The mesh construction could be done procedurally, but by using a Look-Up table of prefab forms the code can substitute alternatives to create a more varied and organic look. A selection of three cube forms and their variations is illustrated below. The cubes themselves are also textured procedurally, using a custom tri-planar mapping technique. This means that however tall the individual columns become the texturing on the will not stretch or deform. This shader technique will be covered in a future post.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubInRuins6.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/12/ResHubInRuins6.jpg" alt="" width="684" height="256" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins6-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins6-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins6-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/12/responsive/ResHubInRuins6-xl.jpg 1024w"></figure>
 <p>The final stage of generation involves dropping pre-designed tree models and grass prefabs onto the geometry. This is done by selecting a room from the list of those placed and then positioning the items within the rooms dimension and at the height the room is set to. This process could also be used to place specific items in specific rooms or place objects adjacent to walls or doors.</p>
 </article>
 </div>
@@ -221,6 +235,7 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/infinite-racetracks-permutation-racer.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/infinite-racetracks-permutation-racer.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm5-2.jpg" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Game Development"/>
             <category term="Explainer"/>
@@ -228,13 +243,15 @@
         <updated>2025-10-04T19:09:35+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm5-2.jpg" alt="" />
                     This post outlines some of the technical issues and solutions connected with&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm5-2.jpg" class="type:primaryImage" alt="" /></p>
                 <div class="entry-header">
-<h1 class="entry-title"><img loading="lazy" style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;" src="http://www.nullpointer.co.uk/images/ResHubPerm1.jpg" alt="" width="100%/" data-is-external-image="true"></h1>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm1.jpg" alt="" width="1819" height="798" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm1-xl.jpg 1024w"></figure>
 </div>
 <div class="entry-container">
 <div class="entry-content">
@@ -243,25 +260,26 @@
 <p>Permutation Racer is an experimental, endless racing game, exploring the procedural construction of space.<br>It’s part of an ongoing investigation of ideas that connect games, permutation and the sublime. The race track is generated from a series of noise filtered ‘biome’ styling functions. There are about 12 region types ranging from chasms to archways and caves, all generated in real time as the player progresses. The objective is simply to travel as far as possible. More generalised information about the game and a download of the software is <a href="https://tomnullpointer.itch.io/permutation-racer">available at this link</a>. A description of the approach developed for Permutation Racer is outlined below.</p>
 <h2>Endless Voxel Track</h2>
 <p>Permutation Racer uses Voxel Isosurfaces to produce its endless tracks. This technique is based on the marching cubes algorithm, a process which transforms a 3d array of density points into a polygonised mesh. There is some good documentation of this technique available <a href="http://paulbourke.net/geometry/polygonise/">here</a>. In short these polygonising algorithms take an array of density values, like a point cloud and traverse the array in voxels, marking the points where the density values shift from interior to exterior values. The difference between ‘inside’ and ‘outside’ is defined as a threshold value, usually between 0 and 1 (though this can be -1 to +1 depending on the density values used). The threshold value dictates the point in a density spectrum where the voxel ‘skin’ lies. For example, if the threshold value was .1 the following string of numbers would be skinned as a small hill-like curve .2 .3 .4 .5 .4 .3 .2. If the threshold was raised to .6 nothing would be polgonised as all the density values are under the threshold. A solidity threshold closer to 0 leads to ‘fuller’ forms whereas a higher values result in a more sparse voxel space. Since Permutation Racer uses a mathematical noise field (simplex) to provide the underlying density values, increasing the frequency of the noise function will also effect the size and number of voxelised ‘blobs’ polygonised in a chunk. The image below demonstrates the sort of effects these parameters can have (density threshold on the y-axis and frequency of noise on the x-axis).</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/VoxelCubes.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/VoxelCubes.jpg" alt="" width="769" height="741" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/VoxelCubes-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/VoxelCubes-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/VoxelCubes-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/VoxelCubes-xl.jpg 1024w"></figure>
 <p>The resolution of the voxel grid is entirely down to the requirements of the game, but a more detailed resolution and larger volume will obviously take longer to calculate. The process of voxelisation is therefore best seperated into individual chunks, so that the game world can be defined/polygonised/rendered/culled on threads. In Permutation Racer each chunk of world consists of a cubic volume containing x=22,z=22,y=16 voxels. The resolution of the resulting mesh can be seen in the chunks below.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm4.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm4.jpg" alt="" width="1420" height="642" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm4-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm4-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm4-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm4-xl.jpg 1024w"></figure>
 <p>These chunks are processed in threads and positioned in the game scene in a linear path to build the racetrack. The image below demonstrates a range of individual chunks, produced from different underlying point cloud data.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm2.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm2.jpg" alt="" width="724" height="262" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm2-xl.jpg 1024w"></figure>
 <p>In the actual game the adjacent chunks that make up the racertrack polygonise adjoining areas of the density array so that chunks remain continuous and readable.</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm5.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm5.jpg" alt="" width="1144" height="620" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm5-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm5-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm5-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm5-xl.jpg 1024w"></figure>
 <p>The image below shows a long section of track, click <a href="http://www.nullpointer.co.uk/images/testrack.gif">here </a>to open the image and zoom in to see the details</p>
-<p><a href="http://www.nullpointer.co.uk/images/testrack.gif"><img loading="lazy" src="http://www.nullpointer.co.uk/images/testrack.gif" alt="" width="100%/" data-is-external-image="true"></a></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/testrack.gif" alt="" width="7376" height="4664"></figure>
+<br>
 <h2>Noise to Signal</h2>
 <p>As with all procedural generation the key to making the resulting world interesting is making the underlying structure interesting. The image of voxel cubes earlier in this post demonstrates the sort of features a simple noise field can create. However, the results are very chaotic and don’t feel organic or purposeful. Players generally enjoy exploring worlds that appear to have either history and purpose, and seem to have been created though geological processes or human intervention. Permutation Racer uses a series of synthesis approaches to generate interesting underlying data forms. These synthesis techniques are primarily based on the layering and filtering of fractal noise. In fact the term synthesis neatly references the approach of musical synthesizers which use similar techniques to layer waveforms into richer and more interesting sound forms. This process is illustrated below (courtesy of http://www.planetoftunes.com/,https://documentation.apple.com/en/logicpro/)</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/synthesis.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/synthesis.jpg" alt="" width="789" height="253" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/synthesis-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/synthesis-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/synthesis-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/synthesis-xl.jpg 1024w"></figure>
 <p>There are many types of synthesis, additive (shown above left) , subtractive and FM (frequency modulation,shown above right). Permutation Racer uses all of these techniques, but applies them to the output of noise functions rather than waveforms. Noise functions (simplex/perlin etc don’t have periodic cycles, but can be smoothed and produced at varying frequencies). The way these functions are layered gives the resulting forms specific characteristics. In Permutation Racer noise layers are modulated by each other and by other mathematical processes such as sinewaves and rounding functions. The image below demonstrates how the main track uses a combined sinewave function to produce the curves in the racetrack. The distortion or ‘curviness’ of the track is increased along the x axis, where the x-value in world space is used to multiply a secondary waveform that distorts the original sinewave (see the FM example above).</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm6.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm6.jpg" alt="" width="789" height="253" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm6-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm6-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm6-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm6-xl.jpg 1024w"></figure>
 <p>This function is calculated for every x,y,z point requested by the polygonising algorithm. Instead for returning unmodified noise, the program returns a noisefield that is modified by many attributes, all of which are based on the spatial location of the request. For example, the GetNoise(x,y,z) function will return 1 for all points that are outside the current sine centre plus a margin amount. This causes the track to follow the sinewave curve and have cliff-walls at its sides. The width of the track is then controllable with the margin variable, which itself can be linked to x distance and other noise function. The GetNoise() function might also introduce increasing amounts of random noise as the y-axis rises over a specific ceiling. This will cause spikes and undulations to form a ceiling over the track. Its the development and combination of these filters that allows the engine to produce interesting geometry.</p>
 <p>Permutation Racer contains a library of GetNoise() functions that produce different terrain; forests, tunnels, corridors, causeways. In fact the game simultaneously calculates two types at all times and interpolates the results before passing the final value back to the polgonising algorithm. This allows the gameworld to blend between different terrain forms as the player progresses. The image below (from an early prototype) shows a forest generation function (left) mixed with a cave generation function (Right).</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm7.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm7.jpg" alt="" width="878" height="190" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm7-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm7-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm7-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm7-xl.jpg 1024w"></figure>
 <p>It only takes a few modifications to use the techniques discussed above for generating a wide range of different game worlds, even spherical ones!</p>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/ResHubPerm8.jpg" alt="" width="100%/" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/11/ResHubPerm8.jpg" alt="" width="944" height="588" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm8-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm8-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm8-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/11/responsive/ResHubPerm8-xl.jpg 1024w"></figure>
 </article>
 </div>
 </div>
@@ -275,60 +293,73 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/installation-art.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/installation-art.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/10/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-2.jpg" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Installation Art"/>
 
         <updated>2025-10-04T19:01:52+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/10/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-2.jpg" alt="" />
                     I have worked on a range of installations and interactives for galleries,&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/10/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-2.jpg" class="type:primaryImage" alt="" /></p>
                 <div class="entry-header">
 <p class="entry-title"><span style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400;">I have worked on a range of installations and interactives for galleries, museums and public events and can act as designer, programmer and artist depending on the specific job. A brief selection of project is listed below, more information is available on request.</span></p>
-<hr></div>
+</div>
 <div class="entry-container">
 <div class="entry-content">
 <article>
 <h2><strong>The Wilding Of Mars</strong></h2>
-<figure id="attachment_1627" class="wp-caption alignnone"><figure class="size-full wp-image-1627"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen.jpg" sizes="(max-width: 5315px) 100vw, 5315px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-150x98.jpg 150w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-300x195.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-1024x667.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/20-Better-Nature-Ginsberg_photo-bettina-matthiesen.jpg 5315w" alt="Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum" width="5315" height="3463" data-is-external-image="true"></figure>
+<figure id="attachment_1627" class="wp-caption alignnone">
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/20-Better-Nature-Ginsberg_photo-bettina-matthiesen.jpg" alt="" width="5315" height="3463" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/20-Better-Nature-Ginsberg_photo-bettina-matthiesen-xl.jpg 1024w"></figure>
+<br>
 <figcaption class="wp-caption-text">Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum</figcaption>
 </figure>
-<br>I was approached by the studio of <a href="https://www.daisyginsberg.com/studio.php" rel="noopener" target="_blank">Alexandra Daisy Ginsberg</a> to design software for the Wilding of Mars Project. The project is described as follows.
+I was approached by the studio of <a href="https://www.daisyginsberg.com/studio.php" rel="noopener" target="_blank">Alexandra Daisy Ginsberg</a> to design software for the Wilding of Mars Project. The project is described as follows.
 <p><em>Human dreams of colonisation are not limited to Earth. We see Mars, untouched by Earth life as barren, treacherous, beautiful; another planet to colonise. But humans invariably become exploiters. Instead, could we imagine Mars colonised only by plants, flourishing without us? The Wilding of Mars simulates the growth of a planetary wilderness, seeded with Earth life forms. In exhibition, a wild garden on Mars thrives over millennia, its growth visible over human hours. The pioneers are seeded in stages as conditions become more tolerable. The plants spread north from the South Pole, developing an ecosystem determined by global and local parameters of water, temperature, and nutrients.</em></p>
-<figure class="alignnone size-full wp-image-1625"><br><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/marsscape1.jpg" sizes="(max-width: 1908px) 100vw, 1908px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1-300x157.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1-1024x536.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/marsscape1.jpg 1908w" alt="marsscape1" width="1908" height="999" data-is-external-image="true"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/marsscape1.jpg" alt="" width="1908" height="999" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/marsscape1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/marsscape1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/marsscape1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/marsscape1-xl.jpg 1024w"></figure>
 <p>I worked with Daisy and the team to develop a software simulation that would represent the possible outcomes of a martian rewilding. The project required a complex simulation that would calculate the spread of multiple species across a variety of terrains. My code took into account local environmental factors such as water, gas and soil nutrition in order to calculate the spread of thousands of simulated plant entities across the three martian seeding locations. Each species creates a ‘map’ of growth across the terrain and is also capable of mutating in ways that effect both its performance and its aesthetic form.</p>
-<figure class="alignnone size-full wp-image-1623"><br><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01.jpg" sizes="(max-width: 3820px) 100vw, 3820px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01-300x169.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01-1024x576.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_01.jpg 3820w" alt="190517_The Wilding of Mars_still_01" width="3820" height="2148" data-is-external-image="true"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/190517_The-Wilding-of-Mars_still_01.jpg" alt="" width="3820" height="2148" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_01-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_01-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_01-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_01-xl.jpg 1024w"></figure>
 <p>In addition to large scale aerial views each simulated location featured a close up view of successful plants growing in small scale local environs. The 3d models for these plants were generated from abstracted structural form data (stored in a similar structure to an L-System) which allowed them represent aesthetic mutations that might have occurred throughout the life of the species (potentially over millions of years). The origin (seed) species were structured as their real-world equivalents are, but over time these forms could mutate into new variant species.</p>
-<figure id="attachment_1628" class="wp-caption alignnone"><figure class="size-full wp-image-1628"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen.jpg" sizes="(max-width: 5315px) 100vw, 5315px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-150x92.jpg 150w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-300x184.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-1024x628.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen.jpg 5315w" alt="Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum" width="5315" height="3262" data-is-external-image="true"></figure>
+<figure id="attachment_1628" class="wp-caption alignnone">
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen.jpg" alt="" width="5315" height="3262" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/27-Better-Nature-Ginsberg_Photo-Bettina-Matthiesen-Matthiesen-xl.jpg 1024w"></figure>
 <figcaption class="wp-caption-text">Better Nature Exhibition by Alexandra Daisy Ginsberg at Vitra Design Museum</figcaption>
 </figure>
 The work shows different seeding locations on mars, with each terrain displaying both a large scale view of the current growth maps and smaller scale views where the individual plants could be represented.</article>
 <article></article>
-<article><figure class="alignnone size-full wp-image-1624"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02.jpg" sizes="(max-width: 3820px) 100vw, 3820px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02-300x169.jpg 300w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02-1024x576.jpg 1024w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/190517_The-Wilding-of-Mars_still_02.jpg 3820w" alt="190517_The Wilding of Mars_still_02" width="3820" height="2148" data-is-external-image="true"></figure></article>
+<article>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/190517_The-Wilding-of-Mars_still_02.jpg" alt="" width="3820" height="2148" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_02-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_02-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_02-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/190517_The-Wilding-of-Mars_still_02-xl.jpg 1024w"></figure>
+</article>
+<article></article>
 <article></article>
 <article></article>
 <article><span style="font-size: inherit;">A record of the evolved forms is output over the course of the simulation, storing the lifespan of species, their forms and their performance.</span>
-<figure class="alignnone size-full wp-image-1630"><img loading="lazy"  src="http://www.nullpointer.co.uk/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox.png" sizes="(max-width: 654px) 100vw, 654px" srcset="http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox-275x300.png 275w, http://www.nullpointer.co.uk:/content/wp-content/uploads/2019/07/2019-07-27-16_18_39-Descendants-Dropbox.png 654w" alt="2019-07-27 16_18_39-Descendants - Dropbox" width="654" height="714" data-is-external-image="true"></figure>
-<hr>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/2019-07-27-16_18_39-Descendants-Dropbox.png" alt="" width="654" height="714" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/2019-07-27-16_18_39-Descendants-Dropbox-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/2019-07-27-16_18_39-Descendants-Dropbox-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/2019-07-27-16_18_39-Descendants-Dropbox-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/2019-07-27-16_18_39-Descendants-Dropbox-xl.png 1024w"></figure>
 <h2>Flutter</h2>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/buttercap1.jpg" alt="" width="100%" align="alignnone" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/buttercap1.jpg" alt="" width="500" height="297" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/buttercap1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/buttercap1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/buttercap1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/buttercap1-xl.jpg 1024w"></figure>
 <p>For this project I designed and wrote software that brought paper-craft made butterflies to life and then recorded each entity to a database. Visitors to the installation were invited to design their own butterfly on card in a series of craft workshops and the resulting paper models were scanned and trimmed by my application into a textures that were then used to generate 3d butterflies. These 3d versions flew around the workshop space (at the southbank centre and later at the millennium galleries) and the participants could find their own contribution fluttering amongst the growing flock.</p>
 <p> </p>
-<center><img loading="lazy" src="http://www.nullpointer.co.uk/images/butter2.jpg" alt="" align="alignnone" data-is-external-image="true"></center>
+<center>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/butter2.jpg" alt="" width="500" height="400" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/butter2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/butter2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/butter2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/butter2-xl.jpg 1024w"></figure>
+</center>
 <p> </p>
 <p>Each butterfly was linked to an id and QR code which could be returned to the exhibition and when placed in view of a local scanner would call the related butterfly back into the installation projector scene.</p>
-<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" src="http://player.vimeo.com/video/5189909" frameborder="0" name="fitvid0" data-mce-fragment="1"></iframe></div></div>
+<p> </p>
+<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" width="674" height="336" style="width: 674px; height: 336px;" src="http://player.vimeo.com/video/5189909" frameborder="0" name="fitvid0" data-mce-fragment="1"></iframe></div></div>
 <p>A later iteration resulted in over 1400 butterflies being created in 13 school workshops across South Yorkshire. Laura Mundy and Janet Jennings ran the workshops, producing a vast database of butterflies that were brought to life on data projectors during the workshops and then stored for later. After all the workshops had been completed where was an exhibition at the Millenium Galleries in Sheffield where children could bring their butterflies back to life in the installation by visiting with their original paper versions.</p>
 <p> </p>
-<center><img src="http://www.nullpointer.co.uk/images/flutterwork.jpg" alt="" width="350" data-is-external-image="true"><img loading="lazy" src="http://www.nullpointer.co.uk/images/flutterwork2.jpg" alt="" width="350" data-is-external-image="true"></center><hr>
+<center>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/flutterwork.jpg" alt="" width="500" height="375" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/flutterwork-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/flutterwork-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/flutterwork-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/flutterwork-xl.jpg 1024w"></figure>
+</center>
 <h2>UntitledApplication</h2>
-<p><img loading="lazy" src="http://www.nullpointer.co.uk/images/expodance.jpg" alt="" width="100%" data-is-external-image="true"></p>
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/10/expodance.jpg" alt="" width="2048" height="1536" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/expodance-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/expodance-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/expodance-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/10/responsive/expodance-xl.jpg 1024w"></figure>
 <p>Untitled Application is an interactive sound piece commissioned by MAAP and SAM for the Leeds Expo. Its an open air work hosted on one of the BBCs ‘big screens’, a range of large outdoor LCD displays in major cities of the UK. The piece itself was produced for the LEEDs Expo, a festival of sound art.</p>
 <p>The work is a two part application. The visual part is written in C++ using openframeworks and opencv. It takes a council CCTV camera as a video feed and performs a series of motion tracking, blob detection functions on the input. Audience movement is used to trigger simple graphic elements on the screen which are superimposed on the camera image. People can generate interactive patterns through their physical movement across the city square.</p>
-<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" src="http://player.vimeo.com/video/6782757" frameborder="0" name="fitvid1" data-mce-fragment="1"></iframe></div></div>
+<div class="fluid-width-video-wrapper"><div class="post__iframe"><iframe loading="lazy" width="668" height="333" style="width: 668px; height: 333px;" src="http://player.vimeo.com/video/6782757" frameborder="0" name="fitvid1" data-mce-fragment="1"></iframe></div></div>
 <p>The second phase of the system is a synthesis engine written in PD (puredata) which communicates via OSC to the C++ application. When a person triggers an animation in a particular area of the screen a message is sent to the synthesis app which plays an apporpriate tone. The notes are selected from three sets of harmonic scales and underpinned by a phased/droning 4 note sitar stye chord. The notes themselves alter pitch and timbre depending on the players behaviour and the generative variables in the synthesis system. Each of the three tonal sets rlates to a specific graphic style in the visuals.</p>
 <p>It’s been great to see people playing with the piece and working out how to draw/compose with bikes, buggies, wheelchairs, skateboards and even spacehoppers.</p>
 </article>
@@ -344,16 +375,19 @@ The work shows different seeding locations on mars, with each terrain displaying
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/about-my-academic-practice.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/about-my-academic-practice.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1-md.jpg" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T11:57:23+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1-md.jpg" alt="" />
                     Presenting my work at the Museo Tamayo, Mexico City I am an&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1-md.jpg" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/9/mexico1.jpg" alt="" width="800" height="534" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/9/responsive/mexico1-xl.jpg 1024w"></figure><em>Presenting my work at the Museo Tamayo, Mexico City</em></p>
 <p>I am an experienced lecturer and academic with a PhD exploring “the digital sublime in videogames”. This research investigates the philosophical and conceptual considerations of using procedural generation and generative processes in game design. </p>
 <p>In parallel to working on my PhD I also worked at The University of Huddersfield as a cross-department practicing lecturer between the school of Art,Design &amp; Architecture and the School of Computing. In this role i taught a range of modules from foundation programming (xna/unity) to Critical Game theory.</p>
@@ -369,19 +403,24 @@ The work shows different seeding locations on mars, with each terrain displaying
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/nullpointer-games.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/nullpointer-games.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/8/ss_244d42e4eed84c0d5e1413914cb6bef2911d3300.1920x1080-md.jpg" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T11:55:28+01:00</updated>
             <summary>
                 <![CDATA[
-                    As Nullpointer Games I established Nullpointer games in 2010. The studio has&hellip;
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/8/ss_244d42e4eed84c0d5e1413914cb6bef2911d3300.1920x1080-md.jpg" alt="" />
+                    As Nullpointer Games I established Nullpointer games in 2010 in order to&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/8/ss_244d42e4eed84c0d5e1413914cb6bef2911d3300.1920x1080-md.jpg" class="type:primaryImage" alt="" /></p>
                 <h2>As Nullpointer Games</h2>
-<p>I established Nullpointer games in 2010. The studio has produced a number of games in collaboration with Big Robot and more recently a series of projects based on my own IP.</p>
-<h3><a href="https://store.steampowered.com/app/2836860/The_Horror_at_Highrook/" target="_blank" rel="noopener noreferrer">The Horror At Highrook</a><figure class="post__image"><img loading="lazy"  style="color: #a5a7b7; font-family: sans-serif; font-size: inherit; font-weight: 400; outline: rgba(16, 137, 255, 0.55) solid 3px !important;" src="https://tomnullpointer.github.io/gh-pages/media/posts/8/_920x430_Header_Capsule.png" alt="" width="920" height="430" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-xl.png 1024w"></figure></h3>
+<p>I established Nullpointer games in 2010 in order to concentrate on the production of PC games. Since then, I have produced a number of games in collaboration with Big Robot and a series of projects based on my own IP.</p>
+<h3><a href="https://store.steampowered.com/app/2836860/The_Horror_at_Highrook/" target="_blank" rel="noopener noreferrer">The Horror At Highrook
+<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/8/_920x430_Header_Capsule-md.png" alt="" width="768" height="359" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-md-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-md-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-md-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/_920x430_Header_Capsule-md-xl.png 1024w"></figure>
+</a></h3>
 <p>"The Horror at Highrook" is an occult card crafting narrative RPG. Explore a haunted mansion with your team of investigators, summon dark entities, craft powerful protections, uncover the fate of the missing family, and choose your own path through the darkness.</p>
 <p>This game was produced with the support of Outersloth publishing, featured in various high profile festivals and was critically acclaimed by the press.</p>
 <p><em>“...a beautifully constructed challenge, filled with ideas and little arcane treats for fans of both cosmic and gothic horror.”</em><br>The Guardian </p>
@@ -415,7 +454,7 @@ The work shows different seeding locations on mars, with each terrain displaying
 <p>Sir is a stealth and survival game unlike any other, set on a mysterious archipelago generated procedurally by you, and therefore unique to each game you play. You can define your own islands, each one created in moments by our rather clever British Countryside Generator. These islands are then populated by a raving aristocracy of murderous robots, their robot hounds, and worse. You job is simply to survive, and get home.</p>
 <figure class="post__video">
 <h3 class="post__video" style="margin-top: 2.28571rem; color: #f2f2f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: bold; letter-spacing: -0.54px; font-size: 1.42383em; background: none 0% 0% / auto repeat scroll padding-box border-box #2a2b34; border-image: none 100% / 1 / 0 stretch; border: 2px dashed #393a47;"><a href="https://store.steampowered.com/app/207670/AVSEQ/" rel="noopener" target="_blank" style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(255, 196, 0, 0.2); border-bottom: 3px solid #ffc400; color: #d9d9e0;">Avseq</a></h3>
-<iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/X4APyGuD0lg" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<iframe loading="lazy" width="549" height="308" style="width: 549px; height: 308px;" src="https://www.youtube.com/embed/X4APyGuD0lg" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
 <p>AVSEQ is an audio-visual sequencer puzzle game. Connect falling atoms to unlock near-endless varieties of music at each stage. Every level of AVSEQ is a music sequencer with 2.2300745198530623×10^43 possible audio permutations, that’s 22 tredecillion in total!</p>
 <figure class="post__image"><img loading="lazy"  style="outline: rgba(16, 137, 255, 0.55) solid 3px !important;" src="https://tomnullpointer.github.io/gh-pages/media/posts/8/NP_logo_NoSubtitle.png" alt="" width="203" height="122" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/8/responsive/NP_logo_NoSubtitle-xl.png 1024w"></figure>
             ]]>
@@ -428,16 +467,19 @@ The work shows different seeding locations on mars, with each terrain displaying
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/about-me-post.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/about-me-post.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" medium="image" />
             <category term="About"/>
 
         <updated>2025-10-04T11:49:01+01:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" alt="" />
                     I'm Tom Betts, aka Nullpointer, an artist, academic and coder with a&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic.png" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/7/instapic-2.png" alt="" width="599" height="505" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/7/responsive/instapic-2-xl.png 1024w"></figure>
 <p>I'm Tom Betts, aka Nullpointer, an artist, academic and coder with a PhD exploring “the digital sublime in videogames”. I was the lead programmer at game development studio <a href="http://www.big-robot.com/" target="_blank" rel="noopener">Big Robot</a>, responsible for games such as “Sir, You are being Hunted”, “The Signal From Tolva” and “The light will keep us safe”. Now I run my own game development studio Nullpointer Games creating games such as "Into The Pit" (with Humble publishing) and more recently "The Horror at Highrook" (with Outersloth).</p>
 <p>I am a published musician, and have performed and delivered talks at international events such as DIGRA, FreePlay, UNITE, Sonar, Rezzed and Indievelopment. I have shown my digital artwork at the ICA, ZKM, New museum(NY) and the Rotterdam film festival and I've worked on projects for the Tate, V&amp;A and Southbank Centre. </p>
