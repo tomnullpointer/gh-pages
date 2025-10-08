@@ -3,12 +3,38 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-10-06T12:50:34+01:00</updated>
+    <updated>2025-10-08T17:22:50+01:00</updated>
     <author>
         <name>me</name>
     </author>
     <id>https://tomnullpointer.github.io/gh-pages</id>
 
+    <entry>
+        <title>Website Refresh</title>
+        <author>
+            <name>me</name>
+        </author>
+        <link href="https://tomnullpointer.github.io/gh-pages/website-refresh.html"/>
+        <id>https://tomnullpointer.github.io/gh-pages/website-refresh.html</id>
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/24/NullSetAV-2013-03-07-17-23-31-78-2.jpg" medium="image" />
+
+        <updated>2025-10-08T17:19:33+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/24/NullSetAV-2013-03-07-17-23-31-78-2.jpg" alt="" />
+                    This is just a short post to accompany the recent site revamp.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/24/NullSetAV-2013-03-07-17-23-31-78-2.jpg" class="type:primaryImage" alt="" /></p>
+                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/24/NullSetAV-2013-03-07-17-23-31-78.jpg" alt="" width="436" height="261" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/24/responsive/NullSetAV-2013-03-07-17-23-31-78-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/24/responsive/NullSetAV-2013-03-07-17-23-31-78-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/24/responsive/NullSetAV-2013-03-07-17-23-31-78-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/24/responsive/NullSetAV-2013-03-07-17-23-31-78-xl.jpg 1024w"></figure>
+<p>This is just a short post to accompany the recent site revamp. I have used a wordpress driven blog for almost a decade, but like many folk I probably edit and update it with new info once a year! It didn't really make any sense to keep running such an overspecced system just in order to have a website available.  So over the last week I have moved most of the content over to a static site system and I'm now hosting the pages on GitHub.</p>
+<p>I'd also like to return to producing some short tech blogs and explainers, and I found wordpress just too unwieldy for me to casually drop into and write a quick piece. I've tried medium and even tumblr, and although They both have decent interfaces and Tumblr has a really interesting community, but I'd quite like to be able to have everything in one place.. So that's the plan - I will port over some bits of orphan content that I have floating on other sites and then attempt to add to this version more frequently. More specifically I'd like to use the site to document the development of future game projects so that my short threads on tech stuff or art don't just vanish the day after I post them on bluesky.</p>
+<p>It feels as if the golden age of social media is fading but at least I can maintain my own records here and hopefully some of the explainers and posts will be of use to others.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Generating City Maps</title>
         <author>
@@ -31,30 +57,33 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/23/1480563951209439235-FIwE-uDXMAwGfs4-2.jpg" class="type:primaryImage" alt="" /></p>
-                <p>This post explains how I coded a city map generator for a project that never made it to full production. Some of the techniques involved are similar to the <a href="https://tomnullpointer.github.io/gh-pages/generating-a-fantasy-map.html">Fantasy Map Generator</a> I worked on. My ambition with this project was to create a city map with sensible zoning, navigation and plot generation for housing etc.</p>
+                <p>This post explains how I coded a city map generator for a project that never made it to full production. Some of the techniques involved are similar to the <a href="https://tomnullpointer.github.io/gh-pages/generating-a-fantasy-map.html">Fantasy Map Generator</a> I worked on, but this project was much more in-depth in terms of how regions of cells relate to each other and their final contents.</p>
+<p>My main ambition with this project was to be able to generate a city map with sensible zoning, navigation and plot generation for housing etc.</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/23/1473996160092225543-FHSu-LLWUAAQxC7-3.jpg" alt="" width="1200" height="687" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1473996160092225543-FHSu-LLWUAAQxC7-3-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1473996160092225543-FHSu-LLWUAAQxC7-3-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1473996160092225543-FHSu-LLWUAAQxC7-3-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1473996160092225543-FHSu-LLWUAAQxC7-3-xl.jpg 1024w"></figure>
-<h1>Starting with graphs</h1>
-<p>For the basic data structure I tried two different graph formats. One was a warped quad grid, as used in games like Townscaper. There is a good explainer of the process for generating such grids <a href="https://www.boristhebrave.com/docs/sylves/1/articles/tutorials/townscaper.html" target="_blank" rel="noopener noreferrer">here</a><a href="https://www.boristhebrave.com/docs/sylves/1/articles/tutorials/townscaper.html" target="_blank" rel="noopener noreferrer"></a>.</p>
-<p>This format as the advantages of every cell being a quad and therefore always having 4 neighbours. This in turn leads to the possibility of generating objects within the cells that can make use of bitmasked tile variation - a method of composing objects out of parts based on connections to their neighbours, you see this frequently in 2d tile based games (<a href="https://code.tutsplus.com/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673t" target="_blank" rel="noopener noreferrer">here is a good explainer)</a></p>
-<p>Obviously knowing that each cell can have 4 walls helps enormously if you want to end up with continuous building structures (see Townscaper!).</p>
-<p>The image below shows how I split this warped quad grid into different city districts (biomes). I also assign a margin of cells at the edges to be either ocean or containing mountain in order to give the city edges. One of the biomes is a river which is positioned more deliberately than the other districts (as it has to connect ot the ocean and ideally spans across the majority of the map. </p>
-<p>In this variant of the approach I also link cells together to create "blocks" that function a little bit like interconnected apartment complexes etc. This was in preparation for a bitmasked style 3d or sprite based decorating phase.</p>
+<h1>Choosing a graph structure</h1>
+<p>For the basic data structure I tried two different graph formats. The first attempt used a warped quad grid, as seen in games like <a href="https://store.steampowered.com/app/1291340/Townscaper/" target="_blank" rel="noopener noreferrer">Townscaper</a>. There is a good explainer of the process for generating such grids <a href="https://www.boristhebrave.com/docs/sylves/1/articles/tutorials/townscaper.html" target="_blank" rel="noopener noreferrer">here</a><a href="https://www.boristhebrave.com/docs/sylves/1/articles/tutorials/townscaper.html" target="_blank" rel="noopener noreferrer"></a>.</p>
+<p>This format has the major advantage of every graph-cell being a quad and therefore always having 4 neighbours. This in turn leads to the possibility of generating objects within the cells that can make use of connective bitmasked tiling - a method of composing graphical tiles out of parts based on connections to their neighbours. you see this approach used frequently in 2d tile based games to allow for walls and paths to maintain sensible visual connections form one tile to the next (<a href="https://code.tutsplus.com/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673t" target="_blank" rel="noopener noreferrer">here is a good explainer)</a></p>
+<p>Obviously knowing that each cell can have four walls helps enormously if you want to create continuous building structures (see Townscaper).</p>
+<p>The image below shows how I split this warped quad grid into different city 'districts' (biomes). I also assign a margin of cells at the edges to be either 'ocean' or 'mountain' in order to give the city some definable edges.</p>
+<p>These districts include a river which is defined more deliberately than the other districts (as it has to connect to the ocean and span across the majority of the map. </p>
+<p>After the districts have been defined I link the cells within them together to create "blocks" that function a like interconnected apartment complexes etc. This 'joing up' pass was in preparation for a bitmasked style 3d or sprite based decorating phase.</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/23/1661996108413906944-FxCYgCCXwAAbnLX.jpg" alt="" width="1020" height="852" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661996108413906944-FxCYgCCXwAAbnLX-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661996108413906944-FxCYgCCXwAAbnLX-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661996108413906944-FxCYgCCXwAAbnLX-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661996108413906944-FxCYgCCXwAAbnLX-xl.jpg 1024w"></figure>
 <h1>Pathing</h1>
-<p>In a similar approach to my Fantasy Map Generator, i place a loose grid of Key Road destinations and then connect those with a A* pathfinding algorithm (removing some and shuffling the route with a few random penalties) The roads follow cell edges and are naturally perturbed even if the underlying structure has no inbuilt penalties. I did however add a light amount of 2d noise to the nodes in order to make the roads a bit more variable.</p>
-<p>It is at this point that I became dissatisfied with the townscaper map approach. My cells could end arranged with very acute edges (see the bottom left roads for an example). Since my roads path along the edges of cells the generator would end up making these zigzag patterns that I didn't like. The other limitation is that all the cells remain roughly the same size, so all the basic house plots are similar sized. </p>
+<p>In a similar approach to my Fantasy Map Generator, I place a loose grid of Key Road destinations (the white squares) across the graph and then connect those points with A* pathfinding. I remove some locations at random to make the result less grid-like .The roads follow cell edges and are naturally perturbed even if the underlying structure has no inbuilt penalties. I did however add a light amount of 2d noise to the pathfinding nodes in order to make the roads a bit more variable.</p>
+<p>At this point that I became dissatisfied with the townscaper map approach. Unless the graph was very relaxed during generation, the cells could end up arranged with very acute edges (see some of the roads on the left of the map as an example). The other limitation of the approach is that all the cells remain roughly the same size (even more so if the graph is more relaxed), so all the basic cell plots are similar in size. </p>
 <p>These limitations can be overcome with more work on relaxing the grid and merging cells, but I decided to try my old favourite alternative. The Voronoi Graph.</p>
 <h1>Voronoi Approach</h1>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/23/1661991473062248448-FxCUSK4WcAAC6nE.png" alt="" width="910" height="752" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661991473062248448-FxCUSK4WcAAC6nE-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661991473062248448-FxCUSK4WcAAC6nE-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661991473062248448-FxCUSK4WcAAC6nE-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1661991473062248448-FxCUSK4WcAAC6nE-xl.png 1024w"></figure>
-<p>The generation process is broadly similar, except each cell is not restricted to being a quad and the resulting mesh is less grid-like. This leads to more variance in the cell shapes and sizes across the map. Also, by placing the seed voronoi cell points in different configurations I can create different styles of layout; gridded, radial etc.</p>
-<p>Roads are calculated in the same way as before, but after pathing is finished I run a function to add margins along every cell edge that bordered a path. In the image above you can see an issue where the end of roads taper, this isn't too hard to fix, I just didn't get around to it!</p>
+<p>The graph generation process is broadly similar to the warped quad mesh, except in a voronoi graph the cells are not restricted to being quads and the resulting mesh is less regular. This leads to more variance in the cell shapes and sizes across the map.</p>
+<p>By placing the seed voronoi cell points in different configurations I could also create different styles of emergent layout; gridded, radial etc.</p>
+<p>Roads are calculated in the same way as before, but after pathing is finished I run a function to add margins along every cell edge that bordered a path. In the image above you can see an issue where the end of roads taper to a single point, this isn't too hard to fix, I just didn't get around to it!</p>
 <h1>Housing</h1>
-<p>To create housing plots I take each cell and bisect it a number of times. These divisions are set to split the cells evenly (to avoid making slivers of geometry). I repeat the process several times (based on the initial size of the cell and a lower limit for child areas produced) allowing the creation of subblocks and alleyways in each cell. </p>
-<p>After the plots are defined I perform a basic square packing routine to see how many buildings I can fit into the remaining plot. This has an element of randomness included to ensure a nice range of building sizes and any plots that are too narrow are eliminated (drawn in red above)</p>
+<p>To create housing plots I take each cell and bisect it a number of times. These divisions are set to split the cells evenly (to avoid making slivers of geometry). I repeat the process several times - based on the initial size of the cell and a lower limit for the number/size of child plots produced&gt; This results in the creation of sub-plots and alley-ways within the original cell. </p>
+<p>After the plots and subplots are defined I perform a basic square packing routine to see how many buildings I can fit into the remaining plot. This has an element of randomness included to ensure a nice range of building sizes (green plots become gardens) and any plots that are too narrow are eliminated (shown in red int he image above)</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/23/1480563951209439235-FIwE-uDXMAwGfs4.jpg" alt="" width="1200" height="624" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1480563951209439235-FIwE-uDXMAwGfs4-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1480563951209439235-FIwE-uDXMAwGfs4-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1480563951209439235-FIwE-uDXMAwGfs4-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/23/responsive/1480563951209439235-FIwE-uDXMAwGfs4-xl.jpg 1024w"></figure>
-<p>Once the data structure is complete I render the map placing building sprites and other decorations within the list of plots (aligning them to their plot direction and scaling them to fit). There are a range of rules to select the sprites based on biome/district type, frequency of building type, size of plot and proximity to other cell types etc.</p>
-<p>Just for fun I assigned some randomly generated names to the districts and add a bit of relevant typography.</p>
-<p>I'd love to return to this prototype some day!</p>
+<p>Once the data structure is complete I render the map by placing building sprites and other decorations within the plots themselves. There are a range of rules to select the sprites based on biome/district type, frequency of building type, size of plot and proximity to other cell types etc. Each sprite is aligned to the plot direction and scaled to fit within. I then generate a network of meshes for the road networks and place the occasional lamppost at intersections. The results were pretty nice and certainly workable for any sort of medieval type city layout.</p>
+<p>Finally, for fun I assigned some randomly generated names to the districts and add a bit of relevant typography.</p>
+<p>I had to put this project on the back-burner due to financial constraints, but I'd love to return to it some day!</p>
 <p> </p>
             ]]>
         </content>
@@ -81,17 +110,18 @@
             <![CDATA[
                     <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1470365535468761092-FGfHYSyWQAcjoWG.jpg" class="type:primaryImage" alt="" /></p>
                 <p>This post presents the various stages of design and coding that I used for my 2021 Procjam entry <a href="https://tomnullpointer.itch.io/procjam21" target="_blank" rel="noopener noreferrer">https://tomnullpointer.itch.io/procjam21</a></p>
-<p>I have always loved the look of d&amp;d/tolkien style fantasy maps. I have always wanted to try generating this sort of pen and paper cartography. And as usual Procjam was a good excuse to spend a bit of time investigating the idea..</p>
+<p>I have always loved the look of D&amp;D/Tolkien style fantasy maps. I have always wanted to try generating this sort of pen and paper cartography. And as usual Procjam was a good excuse to spend a bit of time investigating the idea..</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1467141564870934531-FFxSBOfXIAgZcds.jpg" alt="" width="976" height="976" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141564870934531-FFxSBOfXIAgZcds-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141564870934531-FFxSBOfXIAgZcds-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141564870934531-FFxSBOfXIAgZcds-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141564870934531-FFxSBOfXIAgZcds-xl.jpg 1024w"></figure>
-<h1>Starting with a Vornoi graph</h1>
-<p>As with many of my terrain generation projects I decided to use a voronoi dual graph as the basis of the map.</p>
+<h1>Starting with a Voronoi graph</h1>
+<p>As with many of my terrain generation projects I decided to use a Voronoi dual graph as the basis of the map.</p>
 <figure class="post__image"><img  src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1467141574266171395-FFxTrAOXMAA1zK-.png" alt="" width="328" height="330" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141574266171395-FFxTrAOXMAA1zK--xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141574266171395-FFxTrAOXMAA1zK--sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141574266171395-FFxTrAOXMAA1zK--md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141574266171395-FFxTrAOXMAA1zK--xl.png 1024w"></figure><figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1467141584353435650-FFxVPxzXsAY5Kr6.png" alt="" width="332" height="329" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141584353435650-FFxVPxzXsAY5Kr6-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141584353435650-FFxVPxzXsAY5Kr6-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141584353435650-FFxVPxzXsAY5Kr6-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467141584353435650-FFxVPxzXsAY5Kr6-xl.png 1024w"></figure>
 <p>I generate the graph from a fairly even distribution of initial cells and then mark border cells (red), ocean cells (blue), and terrain cells (green) - based on distance from the edges of the world. Later on i refined this process to result in more organic coast lines.</p>
 <p>The code then positions several mountain peaks in the graph (set safely away from the coasts) and uses a simple diffusion loop to spread out the height, resulting in a range of altitude across the terrain.</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1467569268355125252-FF3aE31XEAAI0Bg.png" alt="" width="779" height="778" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467569268355125252-FF3aE31XEAAI0Bg-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467569268355125252-FF3aE31XEAAI0Bg-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467569268355125252-FF3aE31XEAAI0Bg-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1467569268355125252-FF3aE31XEAAI0Bg-xl.png 1024w"></figure>
 <p>The process then flags each cell with a biome tag biome based on a number of factors such as; distance from the ocean, altitude and underlying noise sampling.</p>
 <h1>Pathfinding</h1>
-<p>After setting up a the assignment of biomes across the map I pick some key cells to serve as destinations for a simulated road system. These are chosen by selecting points on a coarse superimposed grid that guarantees that each destination is always a certain distance from its nearest neighbour Any points that are too close or unreachable are discarded. A simple A* pathfinding system is used to connect the key cells. To ensure a natural flow to the connecting paths, the map is first seeded with traversal penalties. Higher altitude cells have higher penalties and certain biomes (marshes for example) are made harder to cross. In addition to feature specific obstacles, all terrain  cells are treated with a light modifier based on a simple 2d noise array in order to add some randomness to the paths returned. </p>
+<p>After setting up a the assignment of biomes across the map I pick some key cells to serve as destinations for a simulated road system. These are chosen by selecting points on a coarse superimposed grid that guarantees that each destination is always a certain distance from its nearest neighbour Any points that are too close or unreachable are discarded.</p>
+<p>A simple A* pathfinding system is used to connect the key cells. To ensure a natural flow to the connecting paths, the map is first seeded with traversal penalties. Higher altitude cells have higher penalties and certain biomes (swamps for example) are made harder to cross. In addition to feature specific obstacles, all terrain  cells are treated with a light modifier based on a simple 2d noise array in order to add some randomness to the paths returned. </p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/22/1468282156518629381-FGBgBVDWQAwUAcS.png" alt="" width="763" height="766" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1468282156518629381-FGBgBVDWQAwUAcS-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1468282156518629381-FGBgBVDWQAwUAcS-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1468282156518629381-FGBgBVDWQAwUAcS-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/22/responsive/1468282156518629381-FGBgBVDWQAwUAcS-xl.png 1024w"></figure>
 <p>Once a road network has been found the system deletes a few random points and connections (while ensuring that all destinations still have at least one path connecting them) to make the road network less grid like and encourage the occasional appearance of remote outposts etc.</p>
 <p>After the roads are built, a similar system is used to create rivers. In this case the initial points are set to be at the top of the mountain areas close to the peaks used to drive the initial altitude diffusion. The rivers then proceed along cell edges, always trying to path to neighbouring cells with lower altitudes. This creates natural looking streams that end up in the ocean or a landlocked lake.</p>
@@ -529,91 +559,6 @@
 <p><img loading="lazy" src="https://img.itch.zone/aW1hZ2UvNDk1NDQvMjE3MDA0LmpwZw==/original/mGvqB%2F.jpg" alt="screenshot" width="100%" data-is-external-image="true"></p>
 <p>‘In Ruins’ is an experimental, ambient game examining the procedural construction of space. It’s part of an ongoing Phd research project to investigate ideas that connect games, permutation and the sublime. It’s part of a series of games inspired by artistic interpretations of the sublime, in this case the work of Romantic landscape painters (Thomas Cole, Caspar David Friedrich etc). Its also heavily influenced by Fumito Uedas Ico series.</p>
 <p>The player is deposited on the edge of a procedurally generated island. The island consists of overgrown pathways ruined spires and broken ramparts. A central tower looms above the island beckoning the player towards it.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Coding a generative music game – AvSeq</title>
-        <author>
-            <name>me</name>
-        </author>
-        <link href="https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html"/>
-        <id>https://tomnullpointer.github.io/gh-pages/coding-a-generative-music-game-avseq.html</id>
-        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" medium="image" />
-            <category term="Procedural Generation"/>
-            <category term="Game Development"/>
-            <category term="Explainer"/>
-            <category term="Archive"/>
-
-        <updated>2025-10-04T19:18:54+01:00</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" alt="" />
-                    This post outlines some of the technical issues and solutions connected with&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ss_907cc5a3b4478e531440c45cb9d84e1485734d43.1920x1080.jpg" class="type:primaryImage" alt="" /></p>
-                <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq1.jpg" alt="" width="910" height="400" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq1-xl.jpg 1024w"></figure>
-<p><br><br></p>
-<div class="entry-content">
-<article>
-<p>This post outlines some of the technical issues and solutions connected with the development of AvSeq, the first game produced for my PhD research. More generalised information about the game is available <a href="http://www.nullpointer.co.uk/content/avseq-3/">here</a></p>
-<h2>Accurate high frequency audio timing and quantization in Unity</h2>
-<p>During the development of AvSeq I needed to find a way to get a high accuracy audiotimer to trigger audiovisual events in perfect synchronization. Unity is primarily a games engine and had not built-in functionality to support this type of requirement. In libraries like portaudio the code provides a callback function that can deliver buffered content to the soundcard, down to the level of a single sample. In Unity the update threads run at a much slower rate and cant be used for reliable timing. Unity also discourages the use of threads and out-of-update callbacks so I had to find another way. The solution I came up with was to leverage the built in functions of the packaged FMOD library. I particular this library provides functions to<br>grab the current playpoint of a sample and also trigger a sample with a specific pre-roll delay.<br>I used these features in the following steps.</p>
-<ol>
-<li>Setup and play a hardware looping metronome via FMOD. This can be a standard clicktrack sample or even a silent audiofile. The length and playback pitch of the file represents a single audio-beat cycle that can be tracked in code.</li>
-<li>Run a FixedUpdate (or any fast thread) and within this request the the current PCM sample position of the metronome.</li>
-<li>Use this position to detect if the current loop of the metronome sample is nearing its end. The margin of error for this ‘catching’ process detect depends on the frequency of your update and the pitch/frequency of the metronome.</li>
-<li>If the retrieved PCM location is close enough to the next loop point then trigger a new sound to play BUT set the new sample pre-roll to the remaining samples in the current loop (loop sample length- current sample position).</li>
-<li>Don’t create or run any further triggers until the retrieved position has looped back over the zero-point.<em><br></em></li>
-</ol>
-<p>This system allows accuracy up until a relatively high tempo rate (dependent on individual machine speed), and allows the sample accurate triggering and quantizing of triggered audiosources. The tempo of the entire system can be adjusted by varying the playback pitch of the reference metronome, for example a metronome sample of 1 second length, will define a bpm of 60. At double the metronome pitch the bpm will be 120. The ‘catch’ margin can be adjusted dynamically as a percentage of this overall length if you want real-time pitch changes like I use in AvSeq. In AvSeq I also use the looping reference sample to keep track of beats/bars in the total sequence and each new beat trigger the playback of samples assigned to that beat in the sequencer score.</p>
-<p>Some example code:</p>
-<pre>	void FixedUpdate () {
-
-		m_MS=m_ASMetronome.timeSamples;//get the current position of the looping reference sample
-		uint catchup=0;
-		float delay=0;
-
-		if(m_MS&lt;m_CatchMargin &amp;&amp; m_HasLooped==1)//check to see if the reference sample has looped and has been dealt with
-		{
-			m_HasLooped=0;//reset the haslooped indicator
-		}
-
-		//catch end of loop
-		if(m_MS&gt;m_SampleLength-m_CatchMargin)
-		{
-			m_MSCatch=m_MS;
-
-			//only do if we havent marked a new loop yet
-			if(m_HasLooped==0)
-			{
-			catchup=(uint)(m_SampleLength-m_MS);	//work out how long to delay the start of any new sample
-			m_HasLooped=1;	//register that we have dealt with the current loop
-			m_AudioSource.Play(catchup);//play a sample with the correct delay to coincide with the actual loop point
-			}
-		}
-              }
-</pre>
-<p>There’s a bit more discussion and some extensions of the technique discussed at <a href="http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/">http://forum.unity3d.com/threads/audio-stepsequencer-and-they-said-it-couldnt-be-done.78003/</a> </p>
-<h2>Video Feedback effect in Unity</h2>
-<p>I wanted AvSeq to feature some form of video feedback, discovered in camera/tv loop experiments of the 1980s. You can see the effect in this video <a href="https://www.youtube.com/watch?v=eD9rr0gTLSU">https://www.youtube.com/watch?v=eD9rr0gTLSU</a> (although its a recent video, the actual technique is the same). To achieve this I mimicked the feedback loop by rendering a subset of the games geometry to an offscreen surface and then drawing that image in the background of the scene. This meant that each frame of gameplay also had a degree of the previous frame set behind the current objects. By altering the transparency of the previous frame image the system can control the amount of feedback and blur that occurs. The scene setup for this process is show below.</p>
-<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq2.jpg" alt="" width="1448" height="680" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq2-xl.jpg 1024w"></figure>
-<ul>
-<li>A: Shows the scene from a point close to the player perspective, but with the camera pulled back slightly to show the edges of the background screen. The image shows the foreground cubes and their after-images on the background screen (one cube is even passing through the background screen)</li>
-<li><br>B: Shows the positioning of the background screen and the ‘invisible’ offscreen rendering camera. The cubes can easily be seen in front of the screen, within the normal playspace of the game.</li>
-<li><br>C: shows the image viewed from the offscreen rendering camera. This image is then drawn onto the background screen during the next frame.</li>
-</ul>
-<p>Some compensation has to be made to account for offscreen texture surfaces being square and the scene view being landscape, but these are trivial ratio adjustments. In AvSeq I used additive blending on the background screen, in order to control the persistence of each frame and its feedback, but other blending methods can be used to generate more radical effects. Similarly the polygon mesh of the background plane can be warped to force the feedback to flow in a specific direction. Although I avoided extreme warping in the final game version, some of the prototypes demonstrate the effect more clearly.</p>
-<figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/13/ResHubAvseq3.jpg" alt="" width="912" height="412" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-xs.jpg 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-sm.jpg 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-md.jpg 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/13/responsive/ResHubAvseq3-xl.jpg 1024w"></figure>
-<p>Obviously the effect is best observed in motion.</p>
-<div class="post__iframe"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/DvJ1bsjDpz4" allowfullscreen="allowfullscreen"></iframe></div>
-<p>The video above shows the feedback working with different levels of persistence, it also shows some additional layering effects that are introduced between the background screen and the camera depending on the progress of the music. It is important to note that the whole process requires a secondary render camera. This is because if the system uses the primary camera for the feedback render then the resulting image will involve feedback of every visible element. By using a secondary camera specifically for the feedback image the game objects can be separated into layer-masks that appear in the feedback layer, the game layer or both.</p>
-</article>
-</div>
-<p> </p>
             ]]>
         </content>
     </entry>
