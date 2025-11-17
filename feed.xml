@@ -3,7 +3,7 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-11-16T16:19:19+00:00</updated>
+    <updated>2025-11-17T09:56:21+00:00</updated>
     <author>
         <name>me</name>
     </author>
@@ -23,24 +23,23 @@
             <summary>
                 <![CDATA[
                         <img src="https://tomnullpointer.github.io/gh-pages/media/posts/30/1-1527823267-2.jpg" alt="" />
-                    A few days ago I asked the following question on bluesky https://bsky.app/profile/tomnullpointer.bsky.social/post/3m5o52cdej22j&hellip;
+                    I have been prototyping a new game, an RPG of sorts. And&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/30/1-1527823267-2.jpg" class="type:primaryImage" alt="" /></p>
-                <p>A few days ago I asked the following question on bluesky</p>
+                <p>I have been prototyping a new game, an RPG of sorts. And while working on the behaviour of NPCs I realised I was going to have to make a decision regarding they question above.. Should players be able kill important quest givers or plot characters in their playthrough? and if so how should I deal with the consequences. I was interested in finding out what sort of sentiments and solutions already existed for this problem, so I made a quick bsky post to see what people thought.</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/30/2025-11-16-09_48_47-Publii.png" alt="" width="601" height="205" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/30/responsive/2025-11-16-09_48_47-Publii-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/30/responsive/2025-11-16-09_48_47-Publii-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/30/responsive/2025-11-16-09_48_47-Publii-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/30/responsive/2025-11-16-09_48_47-Publii-xl.png 1024w"></figure>
 <p><a href="https://bsky.app/profile/tomnullpointer.bsky.social/post/3m5o52cdej22j" target="_blank" rel="noopener noreferrer">https://bsky.app/profile/tomnullpointer.bsky.social/post/3m5o52cdej22j</a></p>
-<p>I had recently run into this design problem while prototyping a new game, and I was interested in finding out what sort of sentiments and solutions existed, so I made a quick bsky post to see what people thought.</p>
 <p>I was happy to see that other folk were also interested in the problem and I ended up with almost 100 responses  with loads of interesting viewpoints and lots of solutions and examples. Rather than let those results vanish along with the thread I thought I might collate some of them here.</p>
 <p>So the basic problem is as follows: Should a player be allowed to kill important quest-givers in an RPG, and if so how does the game deal with the consequences. </p>
-<p>Many RPGs don't attempt to be particularly realistic or "sim" based. In these games killing an NPC just isn't possible. Most games (almost all the final fantasy titles for instance) have a strict division between combat and exploration, and you cant attack anything outside of those specific delineations. The question I am presenting will never even occur in these games because it has no mechanical avenue to even be a problem.</p>
-<p>However games that lean more towards a simulationist approach (and often more open world sandbox titles) present situations where the player <em>could</em> harm or kill ANY of the NPCs in the world. This can range from deliberately attacking a shopkeeper, to accidentally setting the king on fire with the edge of a misplaced AOE attack. Removing the ability to harm NPCs is valid but might reduce the sense of freedom the game design proposes.</p>
+<p>Many games don't attempt to be super-realistic when it comes to the simulation of NPCs.  A lot of RPG designs (almost all the final fantasy titles for instance) have a strict division between combat and exploration states, and you cant attack anything outside of those specific delineations. In most RPGs killing an NPC just isn't possible. </p>
+<p>However games that lean more towards a simulationist approach might present scenarios where the player <em>could</em> harm or kill some (or all) of the NPCs they encounter. This might range from deliberately attacking a shopkeeper, to accidentally setting the king on fire with the edge of a misplaced AOE attack. Removing the ability to harm NPCs is valid solution but could reduce the players sense of agency and make the gameworld seem more artificial.</p>
 <p>At this point I am going to assume that we want to at least entertain the idea that you can attack NPCs (rather than outright removing the possibility). So what are the different ways we could tackle the resulting situations.</p>
 <p>I can't include all the replies I had to the original post (you can see them in the link above) But Ill try to summarise some of the main ones.</p>
 <h2>No, that didn't happen</h2>
-<p>This is the default route for most games, but it can be handled in different ways. The most basic approach is simply to make key NPCs invulnerable, or ban any combat actions in the zones where those NPCs exist, in sanctuary zones etc. This solution doesn't even pretend that the action in question is possible, which is fine, but definitely frames the game as a less sim/immersive experience.</p>
+<p>This is the default route for most games, but it can be handled in different ways. The most basic approach is simply to make key NPCs invulnerable, or ban any combat actions in the zones where those NPCs exist, in sanctuary zones etc. This solution doesn't even pretend that the action in question is possible, which is fine, but definitely frames the game as a less sim/immersive experience. An alternative is to allow the drama but ignore the consequences.</p>
 <p>In Oblivion, key NPCs wont die when they are reduced to 0 HP, instead they fall unconscious for a short time and then get back up a few moments later. This does add some sense of drama, since your companions can fall in battle and be unable to support you etc. But there is no permanent consequence, and dead folk standing back up in the middle of a battle can look a little silly.</p>
 <h2>Let it happen but Lazarus your way out of the issue</h2>
 <p>This is a common solution, by having a mechanism to resurrect dead key NPCs the game allows any quest lines to be continued. The death of the original NPC becomes a bump in chain rather than a real change of path. In many of the Souls games the NPCs can be killed and then 'resurrected' as ghost-like entities, so you can still shop or talk to them. There are a number of variations of this approach that folk outlined in the thread.</p>
