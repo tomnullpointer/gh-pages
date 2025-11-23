@@ -3,7 +3,7 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-11-23T19:25:48+00:00</updated>
+    <updated>2025-11-23T19:29:09+00:00</updated>
     <author>
         <name>me</name>
     </author>
@@ -16,7 +16,7 @@
         </author>
         <link href="https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p1-dungeon-gen.html"/>
         <id>https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p1-dungeon-gen.html</id>
-        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-15_38_12-2.png" medium="image" />
+        <media:content url="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-18_48_41-.png" medium="image" />
             <category term="Procedural Generation"/>
             <category term="Game Development"/>
             <category term="Explainer"/>
@@ -25,20 +25,19 @@
         <updated>2025-11-23T16:51:52+00:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-15_38_12-2.png" alt="" />
+                        <img src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-18_48_41-.png" alt="" />
                     Procjam Its ProcJam time again https://itch.io/jam/procjam and this year I decided that&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-15_38_12-2.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-18_48_41-.png" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-15_38_12-.png" alt="" width="1017" height="763" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-15_38_12--xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-15_38_12--sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-15_38_12--md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-15_38_12--xl.png 1024w"></figure>
 <h2>Procjam</h2>
 <p>Its ProcJam time again <a href="https://itch.io/jam/procjam">https://itch.io/jam/procjam</a> and this year I decided that rather than spin up a new side-project that will end up unfinished in a dusty archive .. (see <a href="https://www.nullpointer.co.uk/procedurally-generating-books.html" target="_blank" rel="noopener noreferrer">here</a>) I would revamp something that I had worked on previously but never really made presentable.</p>
 <p>So this is the first post in what I hope to be a short diary series about my benched spooky-liminal-horror SCP building generator. I will explain a bunch of the systems that enabled the final 3D version... a few teaser images below.</p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-17_06_41-.png" alt="" width="1637" height="952" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_06_41--xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_06_41--sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_06_41--md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_06_41--xl.png 1024w"></figure>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/31/2025-11-23-17_07_48-.png" alt="" width="1903" height="940" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_07_48--xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_07_48--sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_07_48--md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/31/responsive/2025-11-23-17_07_48--xl.png 1024w"></figure>
-<p> </p>
 <p>The final version is a randomly generated ruined bunker style lab, inspired by Stalker, SCP and the backrooms. But for now I'm going to talk about the basis for this project, and many other PCG games.. The dungeon generator! Its pictured in the header image here and you can play with the WebGL version over on itch at this link</p>
 <p><a href="https://tomnullpointer.itch.io/multi-floor-dungeon-generator" target="_blank" rel="noopener noreferrer">https://tomnullpointer.itch.io/multi-floor-dungeon-generator</a></p>
 <p>Although I am a very visual designer I still try to build the environmental structure of my games into an abstracted data form. This is partly because I'm lazy and I hate laying out endless props and wall pieces, but also because having your game world in an independent data structure makes it much easier to change elements of the world in a direct and manageable way. It also means that when you come to generating the 3d visuals you can skin the data in a variety of different ways without needing to change its data model counterpart.</p>
