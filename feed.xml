@@ -3,7 +3,7 @@
     <title>NULLPOINTER</title>
     <link href="https://tomnullpointer.github.io/gh-pages/feed.xml" rel="self" />
     <link href="https://tomnullpointer.github.io/gh-pages" />
-    <updated>2025-11-28T10:32:54+00:00</updated>
+    <updated>2025-11-28T10:54:26+00:00</updated>
     <author>
         <name>me</name>
     </author>
@@ -32,7 +32,8 @@
             <![CDATA[
                     <p><img src="https://tomnullpointer.github.io/gh-pages/media/posts/33/2025-11-28-10_14_58-.png" class="type:primaryImage" alt="" /></p>
                 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/33/2025-11-28-09_20_43--2.png" alt="" width="1902" height="975" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/2025-11-28-09_20_43--2-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/2025-11-28-09_20_43--2-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/2025-11-28-09_20_43--2-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/2025-11-28-09_20_43--2-xl.png 1024w"></figure>
-<p>This is the final article about my spooky SCP bunker generator that I revised for ProcJam 25. You can read the previous parts <a href="https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p1-dungeon-gen.html" target="_blank" rel="noopener noreferrer">here </a>and <a href="https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p2-solids.html" target="_blank" rel="noopener noreferrer">here</a>. Today I'm going to talk about how I take the plain 3d room generator and add props and atmospheric elements to bring the space to life and hopefully add some of that Stalker SCP vibe.</p>
+<p>This is the final article about my spooky SCP bunker generator that I revised for ProcJam 25. You can read the previous parts <a href="https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p1-dungeon-gen.html" target="_blank" rel="noopener noreferrer">here </a>and <a href="https://tomnullpointer.github.io/gh-pages/procjam-25-diary-p2-solids.html" target="_blank" rel="noopener noreferrer">here</a>. You can also play the final demo <a href="https://tomnullpointer.itch.io/labx19" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<p>Today I'm going to talk about how I take the plain 3d room generator and add props and atmospheric elements to add some of that juicy Stalker SCP vibe.</p>
 <h2>Preparing to decorate</h2>
 <p>Like all good DIY projects preparation is important. I want to place furniture and other items in my newly generated rooms, but there needs to be some logic in how they are instantiated. Having chairs facing walls or ladders leaning against nothing might look odd (and not in the right way). </p>
 <figure class="post__image"><img loading="lazy"  src="https://tomnullpointer.github.io/gh-pages/media/posts/33/walls.png" alt="" width="645" height="358" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/walls-xs.png 320w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/walls-sm.png 480w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/walls-md.png 768w ,https://tomnullpointer.github.io/gh-pages/media/posts/33/responsive/walls-xl.png 1024w"></figure>
